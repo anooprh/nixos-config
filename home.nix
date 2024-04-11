@@ -98,13 +98,15 @@
     pciutils # lspci
     usbutils # lsusb
 
-   ## Browsers
-   google-chrome
-   brave
-   microsoft-edge
+    ## Browsers
+    google-chrome
+    brave
+    microsoft-edge
 
-   ## Development Tools
-   vscode
+    ## Development Tools
+    vscode
+    direnv
+    nix-direnv
   ];
 
   # basic configuration of git, please change to your own
