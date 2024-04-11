@@ -107,6 +107,16 @@
     vscode
     direnv
     nix-direnv
+
+    jetbrains.webstorm
+    jetbrains.pycharm-community
+    jetbrains.jdk
+    jetbrains.idea-community
+    jetbrains.goland
+    jetbrains.clion
+
+    virtualboxWithExtpack
+
   ];
 
   # basic configuration of git, please change to your own

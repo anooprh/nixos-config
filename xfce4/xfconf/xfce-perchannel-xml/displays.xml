@@ -40,7 +40,7 @@
   </property>
   <property name="Fallback" type="empty">
     <property name="eDP-1" type="string" value="Laptop">
-      <property name="Active" type="bool" value="false"/>
+      <property name="Active" type="bool" value="true"/>
       <property name="EDID" type="string" value="d30a048ca3d01e4c48e657f11459ff5643305af5"/>
       <property name="Resolution" type="string" value="1920x1080"/>
       <property name="RefreshRate" type="double" value="120.01550477401557"/>
