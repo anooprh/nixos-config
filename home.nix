@@ -102,6 +102,7 @@
     google-chrome
     brave
     microsoft-edge
+    firefox
 
     ## Development Tools
     vscode
