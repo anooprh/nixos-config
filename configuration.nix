@@ -52,8 +52,8 @@
 
   # Configure keymap in X11
   services.xserver = {
-    layout = "us";
-    xkbVariant = "";
+    xkb.layout = "us";
+    xkb.variant = "";
   };
 
   # Enable CUPS to print documents.
@@ -83,12 +83,8 @@
   users.users.anoop = {
     isNormalUser = true;
     description = "anoop";
-    extraGroups = [ "networkmanager" "wheel" "audio" ];
+    extraGroups = [ "networkmanager" "wheel" "audio" "vboxusers" ];
     shell = pkgs.zsh;
-    packages = with pkgs; [
-      firefox
-    #  thunderbird
-    ];
   };
 
   # Enable automatic login for the user.
