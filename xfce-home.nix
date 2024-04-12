@@ -26,4 +26,10 @@
   programs.gpg.enable = true;
 
   services.gpg-agent.enable = true;
+
+  xfconf.settings = {
+    xfce4-keyboard-shortcuts = {
+      "/commands/custom/<Super>" = "xfce4-popup-whiskermenu";
+    };
+  };
 }

@@ -144,9 +144,8 @@
   };
 
   virtualisation.virtualbox.host.enable = true;
-  nixpkgs.config.virtualbox.enableExtensionPack = true;
   virtualisation.virtualbox.host.enableExtensionPack = true;
   virtualisation.virtualbox.guest.enable = true;
-  virtualisation.virtualbox.guest.x11 = true;
+  virtualisation.virtualbox.guest.seamless = true;
   users.extraGroups.vboxusers.members = [ "anoop" ];
 }
