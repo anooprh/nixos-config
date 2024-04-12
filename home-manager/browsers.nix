@@ -5,7 +5,6 @@
     ## Browsers
     google-chrome
     brave
-    microsoft-edge
     firefox
   ];
 
