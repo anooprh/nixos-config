@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }:
+{ inputs, config, pkgs, lib, ... }:
 
 {
   home.packages = with pkgs; [
@@ -9,7 +9,7 @@
     firefox
   ];
 
-    programs.chromium = {
+  programs.chromium = {
     enable = true;
     package = pkgs.brave;
     extensions = [
