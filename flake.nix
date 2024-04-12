@@ -34,7 +34,7 @@
           home-manager.useUserPackages = true;
 
           # TODO replace ryan with your own username
-          home-manager.users.anoop = import ./home.nix;
+          home-manager.users.anoop = import ./home-manager/home.nix;
 
           # Optionally, use home-manager.extraSpecialArgs to pass arguments to home.nix
           home-manager.extraSpecialArgs = { inherit inputs; };

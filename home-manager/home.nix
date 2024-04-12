@@ -2,10 +2,10 @@
 
 {
   imports = [
-    ./home-manager/xfce-home.nix
-    ./home-manager/browsers.nix
-    ./home-manager/git.nix
-    ./home-manager/shells.nix
+    ./xfce-home.nix
+    ./browsers.nix
+    ./git.nix
+    ./shells.nix
   ];
   
   # TODO please change the username & home directory to your own
