@@ -30,6 +30,7 @@
       xfce.gigolo
       xfce.orage
       xfce.xfburn
+      xfce.xfconf
       xfce.xfce4-appfinder
       xfce.xfce4-clipman-plugin
       xfce.xfce4-cpugraph-plugin
@@ -58,6 +59,7 @@
   };
 
   programs = {
+    xfconf.enable = true;
     dconf.enable = true;
     gnupg.agent = {
       enable = true;
