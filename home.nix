@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ./xfce-home.nix
+    ./home-manager/xfce-home.nix
     ./home-manager/browsers.nix
   ];
   
