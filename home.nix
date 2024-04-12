@@ -3,6 +3,7 @@
 {
   imports = [
     ./xfce-home.nix
+    ./home-manager/browsers.nix
   ];
   
   # TODO please change the username & home directory to your own
@@ -71,6 +72,7 @@
     # gawk
     # zstd
     # gnupg
+    xcape
 
     ## nix related
     #
