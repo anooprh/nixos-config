@@ -28,14 +28,55 @@
   services.gpg-agent.enable = true;
 
   xfconf.settings = {
+    displays = {
+      "AutoEnableProfiles" = true;
+      "IdentityPopups" = true;
+      "Notify" = 1;
+      "b8193aa0cc9666f28509506632bb4cd922adffe8" = "BenQ Left";
+      
+      # Laptop Screen
+      "b8193aa0cc9666f28509506632bb4cd922adffe8/eDP-1" = "Laptop";
+      "b8193aa0cc9666f28509506632bb4cd922adffe8/eDP-1/Active" = true;
+      "b8193aa0cc9666f28509506632bb4cd922adffe8/eDP-1/EDID" = "d30a048ca3d01e4c48e657f11459ff5643305af5";
+      "b8193aa0cc9666f28509506632bb4cd922adffe8/eDP-1/Resolution" = "1920x1080";
+      "b8193aa0cc9666f28509506632bb4cd922adffe8/eDP-1/RefreshRate" = 120.01550477401557;
+      "b8193aa0cc9666f28509506632bb4cd922adffe8/eDP-1/Rotation" = 0;
+      "b8193aa0cc9666f28509506632bb4cd922adffe8/eDP-1/Reflection" = "0";
+      "b8193aa0cc9666f28509506632bb4cd922adffe8/eDP-1/Primary" = false;
+      "b8193aa0cc9666f28509506632bb4cd922adffe8/eDP-1/Scale" = "";
+      "b8193aa0cc9666f28509506632bb4cd922adffe8/eDP-1/Scale/X" = 1;
+      "b8193aa0cc9666f28509506632bb4cd922adffe8/eDP-1/Scale/Y" = 1;
+      "b8193aa0cc9666f28509506632bb4cd922adffe8/eDP-1/Position" = "";
+      "b8193aa0cc9666f28509506632bb4cd922adffe8/eDP-1/Position/X" = 1920;
+      "b8193aa0cc9666f28509506632bb4cd922adffe8/eDP-1/Position/Y" = 0;
+    
+
+      # Extenral BenQ Monitor
+      "b8193aa0cc9666f28509506632bb4cd922adffe8/DP-1" = "RGT 22&quot;";
+      "b8193aa0cc9666f28509506632bb4cd922adffe8/DP-1/Active" = true;
+      "b8193aa0cc9666f28509506632bb4cd922adffe8/DP-1/EDID" = "b857ab2b7312bef763befdd465fa12845b9a5bd3";
+      "b8193aa0cc9666f28509506632bb4cd922adffe8/DP-1/Resolution" = "1920x1080";
+      "b8193aa0cc9666f28509506632bb4cd922adffe8/DP-1/RefreshRate" = 60;
+      "b8193aa0cc9666f28509506632bb4cd922adffe8/DP-1/Rotation" = 0;
+      "b8193aa0cc9666f28509506632bb4cd922adffe8/DP-1/Reflection" = "0";
+      "b8193aa0cc9666f28509506632bb4cd922adffe8/DP-1/Primary" = true;
+      "b8193aa0cc9666f28509506632bb4cd922adffe8/DP-1/Scale" = "";
+      "b8193aa0cc9666f28509506632bb4cd922adffe8/DP-1/Scale/X" = 1;
+      "b8193aa0cc9666f28509506632bb4cd922adffe8/DP-1/Scale/Y" = 1;
+      "b8193aa0cc9666f28509506632bb4cd922adffe8/DP-1/Position" = "";
+      "b8193aa0cc9666f28509506632bb4cd922adffe8/DP-1/Position/X" = 0;
+      "b8193aa0cc9666f28509506632bb4cd922adffe8/DP-1/Position/Y" = 0;
+    };
+
     xfce4-keyboard-shortcuts = {
       "commands/custom/<Alt>F2" = "xfce4-popup-whiskermenu";
 
-      "xfwm4/custom/override" = true;
       "xfwm4/custom/<Super>Down" = "hide_window_key";
       "xfwm4/custom/<Super>Left" = "tile_left_key";
       "xfwm4/custom/<Super>Right" = "tile_right_key";
       "xfwm4/custom/<Super>Up" = "maximize_window_key";
+      "xfwm4/custom/<Alt>Tab" = "cycle_windows_key";
+      "xfwm4/custom/<Alt><Shift>Tab" = "cycle_reverse_windows_key";
     };
     xfce4-session = {
       "startup/ssh-agent/enabled" = false;
