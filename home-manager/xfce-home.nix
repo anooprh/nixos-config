@@ -145,7 +145,7 @@
     mapExpression = {
       # Map Windows (or Super) Key so that behaves as Alt+F2 when pressed and released
       # within the timeout. For Invoking whisker menu popup
-      Super_L = "Alt_L|F2";
+      Super_L = "Alt_L|F3";
     };
   };
 
