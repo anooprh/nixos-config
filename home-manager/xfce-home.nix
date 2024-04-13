@@ -31,6 +31,7 @@
     xfce4-keyboard-shortcuts = {
       "commands/custom/<Alt>F2" = "xfce4-popup-whiskermenu";
 
+      "xfwm4/custom/override" = true;
       "xfwm4/custom/<Super>Down" = "hide_window_key";
       "xfwm4/custom/<Super>Left" = "tile_left_key";
       "xfwm4/custom/<Super>Right" = "tile_right_key";
@@ -142,9 +143,9 @@
     enable = true;
     timeout = 500; # ms
     mapExpression = {
-      # Map Windows (or Super) Key so that behaves as Alt+F3 when pressed and released
+      # Map Windows (or Super) Key so that behaves as Alt+F2 when pressed and released
       # within the timeout. For Invoking whisker menu popup
-      Super_L = "Alt_L|F3";
+      Super_L = "Alt_L|F2";
     };
   };
 
