@@ -4,11 +4,11 @@
   gtk = {
     enable = true;
       iconTheme = {
-      name = "elementary-Xfce-dark";
+      name = "elementary-Xfce";
       package = pkgs.elementary-xfce-icon-theme;
     };
     theme = {
-      name = "zukitre-dark";
+      name = "zukitre";
       package = pkgs.zuki-themes;
     };
     gtk3.extraConfig = {
@@ -29,12 +29,10 @@
 
   xfconf.settings = {
     xfce4-keyboard-shortcuts = {
-      "commands/custom/override" = true; # allow custom commands
       "commands/custom/<Super>c" = "xfce4-popup-clipman";    
       "commands/custom/<Alt>F2" = "xfce4-popup-whiskermenu";
 
       # allow custom wm keybindings
-      "xfwm4/custom/override" = true;
       "xfwm4/custom/<Alt><Shift>Tab" = "cycle_reverse_windows_key";
       "xfwm4/custom/<Alt>Tab" = "cycle_windows_key";
       "xfwm4/custom/<Super>Tab" = "switch_window_key";
@@ -59,7 +57,6 @@
       "general/workspace_count" = 4;
       "general/workspace_names" = [ "1" "2" "3" "4"];
       "general/theme" = "Default";
-     #"general/easy_click" = "Super"; # key used to grab and move windows
       "general/snap_to_windows" = true;
       "general/activate_action" = "switch";
       "general/wrap_cycle" = true; # cycle to first workspace after last

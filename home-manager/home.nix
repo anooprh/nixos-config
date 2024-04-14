@@ -38,8 +38,8 @@
     # here is some command line tools I use frequently
     # feel free to add your own or remove some of them
 
-    # neofetch
-    # nnn # terminal file manager
+    neofetch
+    nnn # terminal file manager
 
     ## archives
     zip
@@ -74,7 +74,6 @@
     # gawk
     # zstd
     # gnupg
-    xcape
 
     ## nix related
     #
