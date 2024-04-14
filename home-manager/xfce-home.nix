@@ -151,13 +151,13 @@
       # Show Dekstop 
       "/plugins/plugin-15" = "showdesktop";  
     };
-    "xfce4-appfinder" = {
+    xfce4-appfinder = {
       "/hide-window-decorations" = false;
       "/always-center" = true;
       "/sort-by-frecency" = true;
       "/remember-category" = true;
     };
-    "xsettings" = {
+    xsettings = {
       "/Net/ThemeName" = "Adwaita";
       "/Net/IconThemeName" = "Adwaita";
     };
