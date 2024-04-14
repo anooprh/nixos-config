@@ -32,9 +32,11 @@
       "commands/custom/<Alt>F2" = "xfce4-popup-whiskermenu";
 
       "xfwm4/custom/<Super>Down" = "hide_window_key";
-      "xfwm4/custom/<Super>Left" = "tile_left_key";
-      "xfwm4/custom/<Super>Right" = "tile_right_key";
       "xfwm4/custom/<Super>Up" = "maximize_window_key";
+      "xfwm4/custom/<Shift><Super>Left" = "move_window_to_monitor_left_key";
+      "xfwm4/custom/<Shift><Super>Right" = "move_window_to_monitor_right_key";
+      "xfwm4/custom/<Shift><Super>Up" = "move_window_to_monitor_up_key";
+      "xfwm4/custom/<Shift><Super>Down" = "move_window_to_monitor_down_key";
       "xfwm4/custom/<Alt>Tab" = "cycle_windows_key";
       "xfwm4/custom/<Alt><Shift>Tab" = "cycle_reverse_windows_key";
     };
