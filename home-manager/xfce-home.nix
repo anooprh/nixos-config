@@ -139,7 +139,7 @@
       # Clock
       "plugins/plugin-13" = "clock";
       "plugins/plugin-13/digital-layout" = 3; # Time Only
-      "plugins/plugin-13/digital-time-format" = "%A, %B %d, %Y   %H:%m:%S %P"; # Saturday, April 13, 2024   10:04:34
+      "plugins/plugin-13/digital-time-format" = "%A, %B %d, %Y   %I:%m:%S %P"; # Saturday, April 13, 2024   10:04:34
       "plugins/plugin-13/tooltip-format" = "%A %d %B %Y"; # Saturday 29 July 2023
       "plugins/plugin-13/mode" = 2; # digital
       "plugins/plugin-13/show-frame" = false;
