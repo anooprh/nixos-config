@@ -28,46 +28,6 @@
   services.gpg-agent.enable = true;
 
   xfconf.settings = {
-    displays = {
-      "AutoEnableProfiles" = true;
-      "IdentityPopups" = true;
-      "Notify" = 1;
-      "b8193aa0cc9666f28509506632bb4cd922adffe8" = "BenQ Left";
-      
-      # Laptop Screen
-      "b8193aa0cc9666f28509506632bb4cd922adffe8/eDP-1" = "Laptop";
-      "b8193aa0cc9666f28509506632bb4cd922adffe8/eDP-1/Active" = true;
-      "b8193aa0cc9666f28509506632bb4cd922adffe8/eDP-1/EDID" = "d30a048ca3d01e4c48e657f11459ff5643305af5";
-      "b8193aa0cc9666f28509506632bb4cd922adffe8/eDP-1/Resolution" = "1920x1080";
-      "b8193aa0cc9666f28509506632bb4cd922adffe8/eDP-1/RefreshRate" = 120.01550477401557;
-      "b8193aa0cc9666f28509506632bb4cd922adffe8/eDP-1/Rotation" = 0;
-      "b8193aa0cc9666f28509506632bb4cd922adffe8/eDP-1/Reflection" = "0";
-      "b8193aa0cc9666f28509506632bb4cd922adffe8/eDP-1/Primary" = false;
-      "b8193aa0cc9666f28509506632bb4cd922adffe8/eDP-1/Scale" = "";
-      "b8193aa0cc9666f28509506632bb4cd922adffe8/eDP-1/Scale/X" = 1;
-      "b8193aa0cc9666f28509506632bb4cd922adffe8/eDP-1/Scale/Y" = 1;
-      "b8193aa0cc9666f28509506632bb4cd922adffe8/eDP-1/Position" = "";
-      "b8193aa0cc9666f28509506632bb4cd922adffe8/eDP-1/Position/X" = 1920;
-      "b8193aa0cc9666f28509506632bb4cd922adffe8/eDP-1/Position/Y" = 0;
-    
-
-      # Extenral BenQ Monitor
-      "b8193aa0cc9666f28509506632bb4cd922adffe8/DP-1" = "RGT 22&quot;";
-      "b8193aa0cc9666f28509506632bb4cd922adffe8/DP-1/Active" = true;
-      "b8193aa0cc9666f28509506632bb4cd922adffe8/DP-1/EDID" = "b857ab2b7312bef763befdd465fa12845b9a5bd3";
-      "b8193aa0cc9666f28509506632bb4cd922adffe8/DP-1/Resolution" = "1920x1080";
-      "b8193aa0cc9666f28509506632bb4cd922adffe8/DP-1/RefreshRate" = 60;
-      "b8193aa0cc9666f28509506632bb4cd922adffe8/DP-1/Rotation" = 0;
-      "b8193aa0cc9666f28509506632bb4cd922adffe8/DP-1/Reflection" = "0";
-      "b8193aa0cc9666f28509506632bb4cd922adffe8/DP-1/Primary" = true;
-      "b8193aa0cc9666f28509506632bb4cd922adffe8/DP-1/Scale" = "";
-      "b8193aa0cc9666f28509506632bb4cd922adffe8/DP-1/Scale/X" = 1;
-      "b8193aa0cc9666f28509506632bb4cd922adffe8/DP-1/Scale/Y" = 1;
-      "b8193aa0cc9666f28509506632bb4cd922adffe8/DP-1/Position" = "";
-      "b8193aa0cc9666f28509506632bb4cd922adffe8/DP-1/Position/X" = 0;
-      "b8193aa0cc9666f28509506632bb4cd922adffe8/DP-1/Position/Y" = 0;
-    };
-
     xfce4-keyboard-shortcuts = {
       "commands/custom/<Alt>F2" = "xfce4-popup-whiskermenu";
 
@@ -86,13 +46,7 @@
       "general/workspace_count" = 4;
       "general/workspace_names" = [ "1" "2" "3" "4"];
     };
-
-    xfce4-panel = {
-
-      # example configurations:
-      # https://github.com/vhminh/dotfiles/blob/7b7dd80408658f0d76f8d0b518a314f5952146ec/nix/modules/desktop.nix#L62
-      # https://github.com/lobre/nix-home/blob/8117fbdb4bca887b875f622132b3b9e9c737a5bf/roles/hm/xfce/xfconf.nix#L144 -> leading slashes! :-O
-      
+    xfce4-panel = {      
       "panels" = [ 1 ];
       "panels/dark-mode" = true;
       "panels/panel-1/nrows" = 1; # number of rows
@@ -172,11 +126,8 @@
       "plugins/plugin-14" = "separator";
       "plugins/plugin-14/style" = 1; # non-transparent
   
-      # Actions 
-      "plugins/plugin-15" = "actions";
-      "plugins/plugin-15/appearance" = 0; # Show action buttons instead of name
-      "plugins/plugin-15/ask-confirmation" = true;
-  
+      # Show Dekstop 
+      "plugins/plugin-15" = "showdesktop";  
     };
   };
 
