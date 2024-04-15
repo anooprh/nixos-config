@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<channel name="xfce4-panel" version="1.0">
+  <property name="configver" type="int" value="2"/>
+  <property name="panels" type="array">
+    <value type="int" value="1"/>
+    <property name="dark-mode" type="bool" value="true"/>
+    <property name="panel-1" type="empty">
+      <property name="position" type="string" value="p=8;x=960;y=1066"/>
+      <property name="length" type="double" value="100"/>
+      <property name="position-locked" type="bool" value="true"/>
+      <property name="icon-size" type="int" value="0"/>
+      <property name="size" type="int" value="26"/>
+      <property name="plugin-ids" type="array">
+        <value type="int" value="1"/>
+        <value type="int" value="2"/>
+        <value type="int" value="3"/>
+        <value type="int" value="4"/>
+        <value type="int" value="5"/>
+        <value type="int" value="6"/>
+        <value type="int" value="7"/>
+        <value type="int" value="8"/>
+        <value type="int" value="9"/>
+        <value type="int" value="10"/>
+        <value type="int" value="11"/>
+        <value type="int" value="12"/>
+        <value type="int" value="13"/>
+        <value type="int" value="14"/>
+        <value type="int" value="15"/>
+      </property>
+      <property name="mode" type="int" value="0"/>
+      <property name="nrows" type="int" value="1"/>
+    </property>
+    <property name="panel-2" type="empty">
+      <property name="autohide-behavior" type="uint" value="1"/>
+      <property name="position" type="string" value="p=10;x=0;y=0"/>
+      <property name="length" type="uint" value="1"/>
+      <property name="position-locked" type="bool" value="true"/>
+      <property name="size" type="uint" value="48"/>
+      <property name="plugin-ids" type="array">
+        <value type="int" value="15"/>
+        <value type="int" value="16"/>
+        <value type="int" value="17"/>
+        <value type="int" value="18"/>
+        <value type="int" value="19"/>
+        <value type="int" value="20"/>
+        <value type="int" value="21"/>
+        <value type="int" value="22"/>
+      </property>
+    </property>
+  </property>
+  <property name="plugins" type="empty">
+    <property name="plugin-1" type="string" value="whiskermenu">
+      <property name="view-mode" type="int" value="0"/>
+      <property name="recent" type="array">
+        <value type="string" value="xfce4-settings-editor.desktop"/>
+        <value type="string" value="google-chrome.desktop"/>
+        <value type="string" value="xfce-settings-manager.desktop"/>
+        <value type="string" value="code.desktop"/>
+        <value type="string" value="brave-browser.desktop"/>
+        <value type="string" value="xfce-keyboard-settings.desktop"/>
+        <value type="string" value="xfce-ui-settings.desktop"/>
+        <value type="string" value="xfce-wm-settings.desktop"/>
+        <value type="string" value="xfce4-terminal-emulator.desktop"/>
+      </property>
+      <property name="menu-width" type="int" value="1920"/>
+      <property name="menu-height" type="int" value="1054"/>
+      <property name="default-category" type="int" value="1"/>
+      <property name="recent-items-max" type="int" value="20"/>
+      <property name="favorites-in-recent" type="bool" value="true"/>
+      <property name="category-icon-size" type="int" value="3"/>
+      <property name="position-categories-horizontal" type="bool" value="false"/>
+      <property name="position-categories-alternate" type="bool" value="true"/>
+      <property name="favorites" type="array">
+        <value type="string" value="xfce4-web-browser.desktop"/>
+        <value type="string" value="xfce4-mail-reader.desktop"/>
+        <value type="string" value="xfce4-file-manager.desktop"/>
+        <value type="string" value="xfce4-terminal-emulator.desktop"/>
+        <value type="string" value="brave-browser.desktop"/>
+      </property>
+      <property name="position-commands-alternate" type="bool" value="true"/>
+      <property name="position-search-alternate" type="bool" value="false"/>
+      <property name="profile-shape" type="int" value="2"/>
+      <property name="show-button-icon" type="bool" value="true"/>
+      <property name="show-button-title" type="bool" value="false"/>
+      <property name="button-single-row" type="bool" value="false"/>
+      <property name="menu-opacity" type="int" value="100"/>
+    </property>
+    <property name="plugin-2" type="string" value="applicationsmenu">
+      <property name="grouping" type="uint" value="1"/>
+      <property name="show-button-title" type="bool" value="false"/>
+    </property>
+    <property name="plugin-3" type="string" value="tasklist">
+      <property name="expand" type="bool" value="true"/>
+      <property name="style" type="uint" value="0"/>
+      <property name="grouping" type="bool" value="false"/>
+      <property name="sort-order" type="int" value="1"/>
+    </property>
+    <property name="plugin-4" type="string" value="separator">
+      <property name="expand" type="bool" value="true"/>
+      <property name="style" type="int" value="0"/>
+    </property>
+    <property name="plugin-5" type="string" value="pager">
+      <property name="style" type="uint" value="0"/>
+      <property name="numbering" type="bool" value="true"/>
+      <property name="rows" type="int" value="1"/>
+      <property name="workspace-scrolling" type="bool" value="false"/>
+      <property name="wrap-workspaces" type="bool" value="true"/>
+    </property>
+    <property name="plugin-6" type="string" value="separator">
+      <property name="square-icons" type="bool" value="true"/>
+      <property name="known-legacy-items" type="array">
+        <value type="string" value="blueman"/>
+        <value type="string" value="ethernet network connection “wired connection 1” active"/>
+      </property>
+      <property name="known-items" type="array">
+        <value type="string" value="blueman"/>
+      </property>
+      <property name="style" type="int" value="0"/>
+    </property>
+    <property name="plugin-8" type="string" value="xfce4-clipman-plugin">
+      <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
+      <property name="show-notifications" type="bool" value="true"/>
+      <property name="settings" type="empty">
+        <property name="add-primary-clipboard" type="bool" value="false"/>
+        <property name="max-texts-in-history" type="int" value="1000"/>
+        <property name="save-on-quit" type="bool" value="true"/>
+      </property>
+    </property>
+    <property name="plugin-9" type="string" value="pulseaudio">
+      <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
+      <property name="multimedia-keys-to-all" type="bool" value="true"/>
+      <property name="play-sound" type="bool" value="true"/>
+      <property name="show-notifications" type="bool" value="true"/>
+    </property>
+    <property name="plugin-10" type="string" value="power-manager-plugin"/>
+    <property name="plugin-11" type="string" value="notification-plugin">
+      <property name="style" type="uint" value="0"/>
+    </property>
+    <property name="plugin-12" type="string" value="separator">
+      <property name="style" type="int" value="1"/>
+    </property>
+    <property name="plugin-13" type="string" value="clock">
+      <property name="style" type="uint" value="0"/>
+      <property name="digital-layout" type="int" value="3"/>
+      <property name="digital-time-format" type="string" value="%A, %B %d, %Y   %I:%m:%S %P"/>
+      <property name="mode" type="int" value="2"/>
+      <property name="show-frame" type="bool" value="false"/>
+      <property name="tooltip-format" type="string" value="%A %d %B %Y"/>
+    </property>
+    <property name="plugin-14" type="string" value="separator">
+      <property name="style" type="int" value="1"/>
+    </property>
+    <property name="plugin-15" type="string" value="showdesktop"/>
+    <property name="plugin-16" type="string" value="separator"/>
+    <property name="plugin-17" type="string" value="launcher">
+      <property name="items" type="array">
+      </property>
+    </property>
+    <property name="plugin-18" type="string" value="launcher">
+      <property name="items" type="array">
+      </property>
+    </property>
+    <property name="plugin-19" type="string" value="launcher">
+      <property name="items" type="array">
+      </property>
+    </property>
+    <property name="plugin-20" type="string" value="launcher">
+      <property name="items" type="array">
+      </property>
+    </property>
+    <property name="plugin-21" type="string" value="separator"/>
+    <property name="plugin-22" type="string" value="directorymenu">
+      <property name="base-directory" type="string" value="/home/anoop"/>
+    </property>
+    <property name="plugin-7" type="string" value="systray">
+      <property name="icon-size" type="int" value="0"/>
+      <property name="known-legacy-items" type="array">
+        <value type="string" value="wi-fi network connection “abirouter” active: abirouter (51%)"/>
+        <value type="string" value="ethernet network connection “wired connection 1” active"/>
+        <value type="string" value="networkmanager applet"/>
+        <value type="string" value="requesting a wi-fi network address for “abirouter”…"/>
+      </property>
+      <property name="known-items" type="array">
+        <value type="string" value="blueman"/>
+      </property>
+    </property>
+    <property name="clipman" type="empty">
+      <property name="settings" type="empty">
+        <property name="show-qr-code" type="bool" value="true"/>
+        <property name="persistent-primary-clipboard" type="bool" value="true"/>
+        <property name="add-primary-clipboard" type="bool" value="true"/>
+      </property>
+      <property name="tweaks" type="empty">
+        <property name="popup-at-pointer" type="bool" value="true"/>
+      </property>
+    </property>
+  </property>
+</channel>

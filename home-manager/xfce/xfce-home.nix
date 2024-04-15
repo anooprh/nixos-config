@@ -28,16 +28,18 @@
   services.gpg-agent.enable = true;
 
   xfconf.settings = {
-    xfce4-keyboard-shortcuts = {
-      "commands/custom/<Super>c" = "xfce4-popup-clipman";    
-      "commands/custom/<Alt>F2" = "xfce4-popup-whiskermenu";
+    # Keyboard shortcuts probably has a bug settings via xfconf. Setting it directly via xml
+    # (Refer to the section after xfconf.settings)
+    #xfce4-keyboard-shortcuts = {
+    #  "commands/custom/<Super>c" = "xfce4-popup-clipman";    
+    #  "commands/custom/<Alt>F2" = "xfce4-popup-whiskermenu";
 
-      # Moving across monitors
-      "xfwm4/custom/<Shift><Super>Left" = "move_window_to_monitor_left_key";
-      "xfwm4/custom/<Shift><Super>Right" = "move_window_to_monitor_right_key";
-      "xfwm4/custom/<Shift><Super>Up" = "move_window_to_monitor_up_key";
-      "xfwm4/custom/<Shift><Super>Down" = "move_window_to_monitor_down_key";
-    };
+    #  # Moving across monitors
+    #  "xfwm4/custom/<Shift><Super>Left" = "move_window_to_monitor_left_key";
+    #  "xfwm4/custom/<Shift><Super>Right" = "move_window_to_monitor_right_key";
+    #  "xfwm4/custom/<Shift><Super>Up" = "move_window_to_monitor_up_key";
+    #  "xfwm4/custom/<Shift><Super>Down" = "move_window_to_monitor_down_key";
+    #};
     xfce4-session = {
       "startup/ssh-agent/enabled" = false;
       "general/LockCommand" = "${pkgs.lightdm}/bin/dm-tool lock";
@@ -146,6 +148,12 @@
     xsettings = {
       "Net/ThemeName" = "Adwaita";
       "Net/IconThemeName" = "Adwaita";
+    };
+  };
+
+  home.file = {
+    ".config/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml" = {
+        source = ./xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml;
     };
   };
 }

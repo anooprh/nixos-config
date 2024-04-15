@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<channel name="xfdashboard" version="1.0">
+  <property name="switch-to-view-on-resume" type="string" value="builtin.applications"/>
+  <property name="theme" type="string" value="xfdashboard"/>
+</channel>

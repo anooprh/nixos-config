@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ./xfce-home.nix
+    ./xfce/xfce-home.nix
     ./browsers.nix
     ./git.nix
     ./shells.nix
