@@ -71,6 +71,19 @@
       # Launcher = whiskermenu
       "plugins/plugin-1" = "whiskermenu";
       "plugins/plugin-1/view-mode" = 0;
+      "plugins/plugin-1/menu-width" = 1920; # Occupy full screen on 1920x1080
+      "plugins/plugin-1/menu-height" = 1054;
+      "plugins/plugin-1/default-category" = 1;
+      "plugins/plugin-1/recent-items-max" = 20;
+      "plugins/plugin-1/favorites-in-recent" = true;
+      "plugins/plugin-1/category-icon-size" = 3;
+      "plugins/plugin-1/position-categories-horizontal" = false;
+      "plugins/plugin-1/position-categories-alternate" = true;
+      "plugins/plugin-1/position-commands-alternate" = true;
+      "plugins/plugin-1/position-search-alternate" = false;
+      "plugins/plugin-1/profile-shape" = 2;
+      "plugins/plugin-1/show-button-icon" = true;
+      "plugins/plugin-1/show-button-title" = false;
   
       # Application Menu
       "plugins/plugin-2" = "applicationsmenu";
