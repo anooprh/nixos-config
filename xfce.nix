@@ -50,6 +50,7 @@
       xtitle
       xwinmosaic
       zuki-themes
+      skippy-xd
     ];
   };
 
