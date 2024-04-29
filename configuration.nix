@@ -50,7 +50,10 @@
   # Enable the XFCE Desktop Environment.
   services.xserver.displayManager.lightdm.enable = true;
   services.xserver.desktopManager.xfce.enable = true;
-
+  security.pam.services.lightdm.enableGnomeKeyring = true;
+  security.pam.services.lightdm-greeters.enableGnomeKeyring = true;
+  services.gnome3.gnome-keyring.enable = true;
+  
   # Configure keymap in X11
   services.xserver = {
     xkb.layout = "us";
