@@ -3,10 +3,7 @@
 {
 
   home.file = {
-    "${config.xdg.userDirs.pictures}/Screenshots" = {
-        source = builtins.toFile "keep" "";
-        recursive = true;
-    };
+    "${config.xdg.userDirs.pictures}/Screenshots/.keep".source = builtins.toFile "keep" ""; 
   };
 
   # Screenshot tool
