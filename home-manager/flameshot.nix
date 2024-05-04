@@ -4,7 +4,8 @@
 
   home.file = {
     "${config.xdg.userDirs.pictures}/Screenshots" = {
-        source = builtins.toFile ".keep" "";
+        source = builtins.toFile "keep" "";
+        recursive = true;
     };
   };
 
@@ -13,8 +14,6 @@
     enable = true;
     settings = {
       General = {
-        uiColor = my.palette."65";
-        contrastUiColor = my.palette."68";
         showHelp = false;
         savePath = "${config.xdg.userDirs.pictures}/Screenshots";
         saveAsFileExtension = ".png";

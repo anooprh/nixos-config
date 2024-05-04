@@ -64,7 +64,7 @@
       "panels/panel-1/icon-size" = 0; # Adjust size automatically
       "panels/panel-1/size" = 26; # Row size (pixels)
       "panels/panel-1/length" = 100.0;
-      "panels/panel-1/position" = "p=8;x=960;y=1066";
+      "panels/panel-1/position" = "p=6;x=960;y=13";
       "panels/panel-1/position-locked" = true;
       "panels/panel-1/plugin-ids" = [ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 ];
       
@@ -167,6 +167,9 @@
   home.file = {
     ".config/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml" = {
         source = ./xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml;
+    };
+    ".config/xfce4/xfconf/xfce-perchannel-xml/displays.xml" = {
+        source = ./xfconf/xfce-perchannel-xml/displays.xml;
     };
     ".config/xfce4/helpers.rc" = {
         source = ./helpers.rc;
