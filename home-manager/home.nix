@@ -6,6 +6,7 @@
     ./browsers.nix
     ./git.nix
     ./shells.nix
+    ./flameshot.nix
   ];
   
   # TODO please change the username & home directory to your own
@@ -115,7 +116,6 @@
     jetbrains.clion
 
   ];
-
   
   # This value determines the home Manager release that your
   # configuration is compatible with. This helps avoid breakage

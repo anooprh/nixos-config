@@ -52,7 +52,6 @@
   services.xserver.desktopManager.xfce.enable = true;
   security.pam.services.lightdm.enableGnomeKeyring = true;
   security.pam.services.lightdm-greeters.enableGnomeKeyring = true;
-  services.gnome3.gnome-keyring.enable = true;
   services.gnome.gnome-keyring.enable = true;
   environment.variables.XDG_RUNTIME_DIR = "/run/user/$UID"; # set the runtime directory
 
