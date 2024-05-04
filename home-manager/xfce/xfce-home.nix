@@ -52,9 +52,10 @@
       "general/activate_action" = "switch";
       "general/wrap_cycle" = true; # cycle to first workspace after last
       "general/cycle_draw_frame" = false; # no blue frame when cycling with alt-tab
-      "general/cycle_preview" = true; # thumbnails when cycling with alt-tab
+      "general/cycle_preview" = false; # hide thumbnails when cycling with alt-tab
       "general/cycle_tabwin_mode" = 0; # don’t cycle through windows in a list
-      "general/wrap_windows" = false; # don’t move window to other workspace when approaching border
+      "general/wrap_windows" = true; # move window to other workspace when approaching border
+      "general/wrap_workspaces" = false; # dont move cursor to other workspace when approaching border
     };
     xfce4-panel = {      
       "panels" = [ 1 ];
@@ -161,6 +162,13 @@
     xsettings = {
       "Net/ThemeName" = "Adwaita";
       "Net/IconThemeName" = "Adwaita";
+    };
+    xfdashboard = {
+      "theme" = "xfdashboard-mint";
+      "reset-search-on-resume" = true;
+      "enable-animations" = false;
+      "windows-view/scroll-event-changes/workspace" = true;
+      "applications-view/show-all-apps" = true;
     };
   };
 
