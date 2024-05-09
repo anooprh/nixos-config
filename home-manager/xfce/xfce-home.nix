@@ -35,7 +35,7 @@
     }; 
     xfwm4 = {
       "general/workspace_count" = 5;
-      "general/workspace_names" = [ "General" "Development" "Social" "VM" "Misc"`];
+      "general/workspace_names" = [ "General" "Development" "Social" "VM" "Misc"];
       "general/theme" = "WhiteSur-Light";
       "general/snap_to_windows" = true;
       "general/activate_action" = "switch";
