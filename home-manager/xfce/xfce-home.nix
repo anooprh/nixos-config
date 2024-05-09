@@ -8,7 +8,7 @@
       package = pkgs.nordzy-icon-theme;
     };
     theme = {
-      name = "WhiteSur-Light-solid";
+      name = "WhiteSur-Light";
       package = pkgs.whitesur-gtk-theme;
     };
     gtk3.extraConfig = {
@@ -36,7 +36,7 @@
     xfwm4 = {
       "general/workspace_count" = 4;
       "general/workspace_names" = [ "1" "2" "3" "4"];
-      "general/theme" = "Default";
+      "general/theme" = "WhiteSur-Light";
       "general/snap_to_windows" = true;
       "general/activate_action" = "switch";
       "general/wrap_cycle" = true; # cycle to first workspace after last
@@ -56,7 +56,7 @@
       "panels/panel-1/length" = 100.0;
       "panels/panel-1/position" = "p=6;x=960;y=13";
       "panels/panel-1/position-locked" = true;
-      "panels/panel-1/plugin-ids" = [ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 ];
+      "panels/panel-1/plugin-ids" = [ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 ];
       
       # Launcher = whiskermenu
       "plugins/plugin-1" = "whiskermenu";
@@ -78,70 +78,74 @@
       # Application Menu
       "plugins/plugin-2" = "applicationsmenu";
       "plugins/plugin-2/show-button-title" = false;
-  
-      # Tasklist
-      "plugins/plugin-3" = "tasklist";
-      "plugins/plugin-3/grouping" = false;
-      "plugins/plugin-3/sort-order" = 01; # Group title and timestamp
-  
-      # Separator
-      "plugins/plugin-4" = "separator";
-      "plugins/plugin-4/style" = 0; # transparent
-      "plugins/plugin-4/expand" = true;
-  
+
       # Workspaces
-      "plugins/plugin-5" = "pager";
-      "plugins/plugin-5/rows" = 1;
-      "plugins/plugin-5/wrap-workspaces" = true;
-      "plugins/plugin-5/numbering" = false;
-      "plugins/plugin-5/miniature-view" = false;
-      "plugins/plugin-5/workspace-scrolling" = false;
-  
+      "plugins/plugin-3" = "pager";
+      "plugins/plugin-3/rows" = 1;
+      "plugins/plugin-3/wrap-workspaces" = true;
+      "plugins/plugin-3/numbering" = false;
+      "plugins/plugin-3/miniature-view" = false;
+      "plugins/plugin-3/workspace-scrolling" = false;
+
+      # Windock Menu Plugin
+      "plugins/plugin-4" = "wckmenu-plugin";
+
+      # Windock Plugin
+      "plugins/plugin-5" = "windowck-plugin";
+
       # Separator
       "plugins/plugin-6" = "separator";
       "plugins/plugin-6/style" = 0; # transparent
+      "plugins/plugin-6/expand" = true;
+
+      # Window Buttons
+      "plugins/plugin-7" = "wckbuttons";
+   
+      # Separator
+      "plugins/plugin-8" = "separator";
+      "plugins/plugin-8/style" = 0; # transparent
   
       # Sys tray
-      "plugins/plugin-7" = "systray";
-      "plugins/plugin-7/icon-size" = 0;
+      "plugins/plugin-9" = "systray";
+      "plugins/plugin-9/icon-size" = 0;
   
       # clipboard
-      "plugins/plugin-8" = "xfce4-clipman-plugin";
-      "plugins/plugin-8/settings/save-on-quit" = true;
-      "plugins/plugin-8/settings/max-texts-in-history" = 1000;
-      "plugins/plugin-8/settings/add-primary-clipboard" = false;
+      "plugins/plugin-10" = "xfce4-clipman-plugin";
+      "plugins/plugin-10/settings/save-on-quit" = true;
+      "plugins/plugin-10/settings/max-texts-in-history" = 1000;
+      "plugins/plugin-10/settings/add-primary-clipboard" = false;
   
       # Pulse audio
-      "plugins/plugin-9" = "pulseaudio";
-      "plugins/plugin-9/enable-keyboard-shortcuts" = true;
-      "plugins/plugin-9/multimedia-keys-to-all" = true;
-      "plugins/plugin-9/play-sound" = true;
-      "plugins/plugin-9/show-notifications" = true;
+      "plugins/plugin-11" = "pulseaudio";
+      "plugins/plugin-11/enable-keyboard-shortcuts" = true;
+      "plugins/plugin-11/multimedia-keys-to-all" = true;
+      "plugins/plugin-11/play-sound" = true;
+      "plugins/plugin-11/show-notifications" = true;
   
       # Power manager
-      "plugins/plugin-10" = "power-manager-plugin";
+      "plugins/plugin-12" = "power-manager-plugin";
   
       # Notification
-      "plugins/plugin-11" = "notification-plugin";
-  
-      # Separator
-      "plugins/plugin-12" = "separator";
-      "plugins/plugin-12/style" = 1; # non-transparent
-  
-      # Clock
-      "plugins/plugin-13" = "clock";
-      "plugins/plugin-13/digital-layout" = 3; # Time Only
-      "plugins/plugin-13/digital-time-format" = "%A, %B %d, %Y   %I:%M:%S %P"; # Saturday, April 13, 2024   10:04:34
-      "plugins/plugin-13/tooltip-format" = "%A %d %B %Y"; # Saturday 29 July 2023
-      "plugins/plugin-13/mode" = 2; # digital
-      "plugins/plugin-13/show-frame" = false;
+      "plugins/plugin-13" = "notification-plugin";
   
       # Separator
       "plugins/plugin-14" = "separator";
       "plugins/plugin-14/style" = 1; # non-transparent
   
+      # Clock
+      "plugins/plugin-15" = "clock";
+      "plugins/plugin-15/digital-layout" = 3; # Time Only
+      "plugins/plugin-15/digital-time-format" = "%A, %B %d, %Y   %I:%M:%S %P"; # Saturday, April 13, 2024   10:04:34
+      "plugins/plugin-15/tooltip-format" = "%A %d %B %Y"; # Saturday 29 July 2023
+      "plugins/plugin-15/mode" = 2; # digital
+      "plugins/plugin-15/show-frame" = false;
+  
+      # Separator
+      "plugins/plugin-16" = "separator";
+      "plugins/plugin-16/style" = 1; # non-transparent
+  
       # Show Dekstop 
-      "plugins/plugin-15" = "showdesktop";  
+      "plugins/plugin-17" = "showdesktop";  
     };
     xfce4-appfinder = {
       "hide-window-decorations" = false;
