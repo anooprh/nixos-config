@@ -34,8 +34,8 @@
       "general/LockCommand" = "${pkgs.lightdm}/bin/dm-tool lock";
     }; 
     xfwm4 = {
-      "general/workspace_count" = 4;
-      "general/workspace_names" = [ "1" "2" "3" "4"];
+      "general/workspace_count" = 5;
+      "general/workspace_names" = [ "General" "Development" "Social" "VM" "Misc"];
       "general/theme" = "WhiteSur-Light";
       "general/snap_to_windows" = true;
       "general/activate_action" = "switch";
