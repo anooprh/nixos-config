@@ -34,6 +34,7 @@
       xfce.xfce4-clipman-plugin
       xfce.xfce4-cpugraph-plugin
       xfce.xfce4-dict
+      xfce.xfce4-dockbarx-plugin
       xfce.xfce4-fsguard-plugin
       xfce.xfce4-genmon-plugin
       xfce.xfce4-mpc-plugin
@@ -44,6 +45,7 @@
       xfce.xfce4-systemload-plugin
       xfce.xfce4-timer-plugin
       xfce.xfce4-volumed-pulse
+      xfce.xfce4-windowck-plugin
       xfce.xfce4-weather-plugin
       xfce.xfce4-whiskermenu-plugin
       xfce.xfce4-xkb-plugin
