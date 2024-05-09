@@ -35,8 +35,8 @@
     }; 
     xfwm4 = {
       "general/workspace_count" = 5;
-      "general/workspace_names" = [ "General" "Development" "Social" "VM" "Misc"];
-      "general/theme" = "WhiteSur-Light";
+      "general/workspace_names" = [ "Gen" "Dev" "Chat" "VM's" "Misc"];
+      "general/theme" = "WhiteSur-Dark";
       "general/snap_to_windows" = true;
       "general/activate_action" = "switch";
       "general/wrap_cycle" = true; # cycle to first workspace after last
