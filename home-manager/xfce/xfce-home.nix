@@ -154,8 +154,8 @@
       "remember-category" = true;
     };
     xsettings = {
-      "Net/ThemeName" = "WhiteSur-Light";
-      "Net/IconThemeName" = "Nordzy-cyan";
+      "Net/ThemeName" = "WhiteSur-Dark-solid";
+      "Net/IconThemeName" = "Nordzy-cyan-dark";
     };
     xfdashboard = {
       "theme" = "xfdashboard-mint";
