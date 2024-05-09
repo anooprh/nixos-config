@@ -48,7 +48,7 @@
     };
     xfce4-panel = {      
       "panels" = [ 1 ];
-      "panels/dark-mode" = true;
+      "panels/dark-mode" = false;
       "panels/panel-1/nrows" = 1; # number of rows
       "panels/panel-1/mode" = 0; # Horizontal
       "panels/panel-1/icon-size" = 0; # Adjust size automatically
@@ -154,8 +154,8 @@
       "remember-category" = true;
     };
     xsettings = {
-      "Net/ThemeName" = "Adwaita";
-      "Net/IconThemeName" = "Adwaita";
+      "Net/ThemeName" = "WhiteSur-Light";
+      "Net/IconThemeName" = "Nordzy-cyan";
     };
     xfdashboard = {
       "theme" = "xfdashboard-mint";
