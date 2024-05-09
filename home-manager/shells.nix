@@ -8,7 +8,8 @@
     syntaxHighlighting.enable = true;
 
     shellAliases = {
-        k = "kubectl";    
+        k = "kubectl"; 
+        p = "cd ~/Workspace";  
     };
     history.size = 1000000;
     history.path = "${config.xdg.dataHome}/zsh/history";
@@ -19,4 +20,7 @@
       theme = "robbyrussell";
     };
   };
+
+  programs.direnv.enable = true;
+  programs.direnv.nix-direnv.enable = true;
 }

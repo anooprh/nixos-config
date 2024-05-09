@@ -92,8 +92,6 @@
 
     ## Development Tools
     vscode
-    direnv
-    nix-direnv
 
     jetbrains.webstorm
     jetbrains.pycharm-community

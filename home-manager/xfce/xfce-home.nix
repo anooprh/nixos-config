@@ -93,7 +93,8 @@
       "plugins/plugin-5" = "pager";
       "plugins/plugin-5/rows" = 1;
       "plugins/plugin-5/wrap-workspaces" = true;
-      "plugins/plugin-5/numbering" = true;
+      "plugins/plugin-5/numbering" = false;
+      "plugins/plugin-5/miniature-view" = false;
       "plugins/plugin-5/workspace-scrolling" = false;
   
       # Separator
@@ -165,9 +166,9 @@
     ".config/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml" = {
         source = ./xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml;
     };
-    ".config/xfce4/xfconf/xfce-perchannel-xml/displays.xml" = {
-        source = ./xfconf/xfce-perchannel-xml/displays.xml;
-    };
+    #".config/xfce4/xfconf/xfce-perchannel-xml/displays.xml" = {
+    #    source = ./xfconf/xfce-perchannel-xml/displays.xml;
+    #};
     ".config/xfce4/helpers.rc" = {
         source = ./helpers.rc;
     };

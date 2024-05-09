@@ -52,8 +52,14 @@
       xsel
       xtitle
       xwinmosaic
-      zuki-themes
       skippy-xd
+
+      # Themes, Cursors, Icons (Look and Feel)
+      whitesur-gtk-theme
+      zuki-themes
+      whitesur-cursors
+      whitesur-icon-theme
+      nordzy-icon-theme
     ];
   };
 
