@@ -107,7 +107,7 @@
           enable = true;
           greeters.slick = {
             enable = true;
-            theme.name = "Zukitre-dark";
+            theme.name = "WhiteSur-Light-solid";
           };
         };
       };

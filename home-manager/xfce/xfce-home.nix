@@ -3,22 +3,22 @@
 {
   gtk = {
     enable = true;
-      iconTheme = {
-      name = "elementary-Xfce";
-      package = pkgs.elementary-xfce-icon-theme;
+    iconTheme = {
+      name = "Nordzy-cyan";
+      package = pkgs.nordzy-icon-theme;
     };
     theme = {
-      name = "zukitre";
-      package = pkgs.zuki-themes;
+      name = "WhiteSur-Light-solid";
+      package = pkgs.whitesur-gtk-theme;
     };
     gtk3.extraConfig = {
       Settings = ''
-        gtk-application-prefer-dark-theme=1
+        gtk-application-prefer-dark-theme=0
       '';
     };
     gtk4.extraConfig = {
       Settings = ''
-        gtk-application-prefer-dark-theme=1
+        gtk-application-prefer-dark-theme=0
       '';
     };
   };
