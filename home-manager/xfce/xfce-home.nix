@@ -35,7 +35,7 @@
     }; 
     xfwm4 = {
       "general/workspace_count" = 5;
-      "general/workspace_names" = [ "Gen" "Dev" "Chat" "VM's" "Misc"];
+      "general/workspace_names" = [ "Gen" "Dev" "Chat" "VM's" "Read"];
       "general/theme" = "WhiteSur-Light";
       "general/snap_to_windows" = true;
       "general/activate_action" = "switch";
@@ -56,7 +56,7 @@
       "panels/panel-1/length" = 100.0;
       "panels/panel-1/position" = "p=6;x=960;y=13";
       "panels/panel-1/position-locked" = true;
-      "panels/panel-1/plugin-ids" = [ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 ];
+      "panels/panel-1/plugin-ids" = [ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20];
       
       # Launcher = whiskermenu
       "plugins/plugin-1" = "whiskermenu";
@@ -79,74 +79,92 @@
       "plugins/plugin-2" = "applicationsmenu";
       "plugins/plugin-2/show-button-title" = false;
 
+      # Tasklist
+      "plugins/plugin-3" = "tasklist";
+      "plugins/plugin-3/flat-buttons" = true;
+      "plugins/plugin-3/show-labels" = false;
+      "plugins/plugin-3/show-handle" = true;
+      "plugins/plugin-3/show-tooltips" =  true;
+      "plugins/plugin-3/grouping" = true;
+
+      # Separator
+      "plugins/plugin-4" = "separator";
+      "plugins/plugin-4/style" = 3; # handle
+
+      # Window Menu
+      "plugins/plugin-5" = "windowmenu";
+      "plugins/plugin-5/workspace-actions" = true;
+      "plugins/plugin-5/style" = 1; # Show button instead of Application Icon
+
+
       # Workspaces
-      "plugins/plugin-3" = "pager";
-      "plugins/plugin-3/rows" = 1;
-      "plugins/plugin-3/wrap-workspaces" = true;
-      "plugins/plugin-3/numbering" = false;
-      "plugins/plugin-3/miniature-view" = false;
-      "plugins/plugin-3/workspace-scrolling" = false;
+      "plugins/plugin-6" = "pager";
+      "plugins/plugin-6/rows" = 1;
+      "plugins/plugin-6/wrap-workspaces" = true;
+      "plugins/plugin-6/numbering" = false;
+      "plugins/plugin-6/miniature-view" = false;
+      "plugins/plugin-6/workspace-scrolling" = false;
 
       # Windock Menu Plugin
-      "plugins/plugin-4" = "wckmenu-plugin";
+      "plugins/plugin-7" = "wckmenu-plugin";
 
       # Windock Plugin
-      "plugins/plugin-5" = "windowck-plugin";
+      "plugins/plugin-8" = "windowck-plugin";
 
       # Separator
-      "plugins/plugin-6" = "separator";
-      "plugins/plugin-6/style" = 0; # transparent
-      "plugins/plugin-6/expand" = true;
+      "plugins/plugin-9" = "separator";
+      "plugins/plugin-9/style" = 0; # transparent
+      "plugins/plugin-9/expand" = true;
 
       # Window Buttons
-      "plugins/plugin-7" = "wckbuttons";
+      "plugins/plugin-10" = "wckbuttons";
    
       # Separator
-      "plugins/plugin-8" = "separator";
-      "plugins/plugin-8/style" = 0; # transparent
+      "plugins/plugin-11" = "separator";
+      "plugins/plugin-11/style" = 0; # transparent
   
       # Sys tray
-      "plugins/plugin-9" = "systray";
-      "plugins/plugin-9/icon-size" = 0;
+      "plugins/plugin-12" = "systray";
+      "plugins/plugin-12/icon-size" = 0;
   
       # clipboard
-      "plugins/plugin-10" = "xfce4-clipman-plugin";
-      "plugins/plugin-10/settings/save-on-quit" = true;
-      "plugins/plugin-10/settings/max-texts-in-history" = 1000;
-      "plugins/plugin-10/settings/add-primary-clipboard" = false;
+      "plugins/plugin-13" = "xfce4-clipman-plugin";
+      "plugins/plugin-13/settings/save-on-quit" = true;
+      "plugins/plugin-13/settings/max-texts-in-history" = 1000;
+      "plugins/plugin-13/settings/add-primary-clipboard" = false;
   
       # Pulse audio
-      "plugins/plugin-11" = "pulseaudio";
-      "plugins/plugin-11/enable-keyboard-shortcuts" = true;
-      "plugins/plugin-11/multimedia-keys-to-all" = true;
-      "plugins/plugin-11/play-sound" = true;
-      "plugins/plugin-11/show-notifications" = true;
+      "plugins/plugin-14" = "pulseaudio";
+      "plugins/plugin-14/enable-keyboard-shortcuts" = true;
+      "plugins/plugin-14/multimedia-keys-to-all" = true;
+      "plugins/plugin-14/play-sound" = true;
+      "plugins/plugin-14/show-notifications" = true;
   
       # Power manager
-      "plugins/plugin-12" = "power-manager-plugin";
+      "plugins/plugin-15" = "power-manager-plugin";
   
       # Notification
-      "plugins/plugin-13" = "notification-plugin";
+      "plugins/plugin-16" = "notification-plugin";
   
       # Separator
-      "plugins/plugin-14" = "separator";
-      "plugins/plugin-14/style" = 1; # non-transparent
+      "plugins/plugin-17" = "separator";
+      "plugins/plugin-17/style" = 1; # non-transparent
   
       # Clock
-      "plugins/plugin-15" = "clock";
-      "plugins/plugin-15/digital-layout" = 3; # Time Only
-      "plugins/plugin-15/digital-time-font" = "Sans Bold 9";
-      "plugins/plugin-15/digital-time-format" = "%A, %B %d, %Y   %I:%M:%S %P"; # Saturday, April 13, 2024   10:04:34
-      "plugins/plugin-15/tooltip-format" = "%A %d %B %Y"; # Saturday 29 July 2023
-      "plugins/plugin-15/mode" = 2; # digital
-      "plugins/plugin-15/show-frame" = false;
+      "plugins/plugin-18" = "clock";
+      "plugins/plugin-18/digital-layout" = 3; # Time Only
+      "plugins/plugin-18/digital-time-font" = "Sans Bold 9";
+      "plugins/plugin-18/digital-time-format" = "%A, %B %d, %Y   %I:%M:%S %P"; # Saturday, April 13, 2024   10:04:34
+      "plugins/plugin-18/tooltip-format" = "%A %d %B %Y"; # Saturday 29 July 2023
+      "plugins/plugin-18/mode" = 2; # digital
+      "plugins/plugin-18/show-frame" = false;
   
       # Separator
-      "plugins/plugin-16" = "separator";
-      "plugins/plugin-16/style" = 1; # non-transparent
+      "plugins/plugin-19" = "separator";
+      "plugins/plugin-19/style" = 1; # non-transparent
   
       # Show Dekstop 
-      "plugins/plugin-17" = "showdesktop";  
+      "plugins/plugin-20" = "showdesktop";  
     };
     xfce4-appfinder = {
       "hide-window-decorations" = false;
