@@ -1,3 +1,28 @@
 .xfce4-panel.background {
-    background-color: rgba(168, 11, 11, 0.8); 
+    background-color: rgba(49, 11, 216, 0.8); 
+}
+
+#xfce-panel-toggle-button:checked {
+    background-color: #796da3;
+}
+
+#xfce-panel-toggle-button:hover {
+    color: #f28e7a;
+    background-color: #2d202b;
+}
+
+#xfce-panel-toggle-button {
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.xfce4-panel.background button {
+    min-height: 16px;
+    min-width: 28px;
+    padding: 0;
+    border-radius: 0;
+}
+
+* {
+    border-radius: 0;
 }

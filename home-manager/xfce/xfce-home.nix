@@ -4,8 +4,8 @@
   gtk = {
     enable = true;
     iconTheme = {
-      name = "Nordzy-cyan";
-      package = pkgs.nordzy-icon-theme;
+      name = "WhiteSur-Light";
+      package = pkgs.whitesur-icon-theme;
     };
     theme = {
       name = "WhiteSur-Light";
@@ -36,7 +36,7 @@
     xfwm4 = {
       "general/workspace_count" = 5;
       "general/workspace_names" = [ "Gen" "Dev" "Chat" "VM's" "Misc"];
-      "general/theme" = "WhiteSur-Dark";
+      "general/theme" = "WhiteSur-Light";
       "general/snap_to_windows" = true;
       "general/activate_action" = "switch";
       "general/wrap_cycle" = true; # cycle to first workspace after last
@@ -154,8 +154,8 @@
       "remember-category" = true;
     };
     xsettings = {
-      "Net/ThemeName" = "WhiteSur-Dark-solid";
-      "Net/IconThemeName" = "Nordzy-cyan-dark";
+      "Net/ThemeName" = "WhiteSur-Light";
+      "Net/IconThemeName" = "WhiteSur-Dark";
     };
     xfdashboard = {
       "theme" = "xfdashboard-mint";
