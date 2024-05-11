@@ -47,7 +47,7 @@
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
-# KDE Plasma 6 is now available on unstable
+  # KDE Plasma 6 is now available on unstable
   services.desktopManager.plasma6.enable = true;  
   services.xserver.displayManager.sddm.wayland.enable = true;
 

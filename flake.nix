@@ -1,5 +1,5 @@
 {
-  description = "A very basic flake";
+  description = "A very basic flak=";
 
   inputs = {
     # NixOS official package source, using the nixos-unstable branch here
@@ -16,25 +16,36 @@
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    plasma-manager = {
+      url = "github:pjones/plasma-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.home-manager.follows = "home-manager";
+    };
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs: {
-    # Please replace my-nixos with your hostname
-    nixosConfigurations.hpspectre = nixpkgs.lib.nixosSystem {
+  outputs = { self, nixpkgs, home-manager, plasma-manager, ... }@inputs: {
+    let
+      # Replace with your username
+      username = "anoop";
+      
+      # Replace with the fitting architecture
       system = "x86_64-linux";
+    in
+
+    nixosConfigurations.hpspectre = nixpkgs.lib.nixosSystem {
+      inherit system;
       modules = [
         # Import the previous configuration.nix we used,
         # so the old configuration file still takes effect
         ./configuration.nix
 
-  	# make home-manager as a module of nixos
+  	    # make home-manager as a module of nixos
         # so that home-manager configuration will be deployed automatically when executing `nixos-rebuild switch`
         home-manager.nixosModules.home-manager {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
-
-          # TODO replace ryan with your own username
-          home-manager.users.anoop = import ./home-manager/home.nix;
+          home-manager.users."${username}" = import ./home-manager/home.nix;
+          home-manager.sharedModules = [ plasma-manager.homeManagerModules.plasma-manager ];
 
           # Optionally, use home-manager.extraSpecialArgs to pass arguments to home.nix
           home-manager.extraSpecialArgs = { inherit inputs; };
