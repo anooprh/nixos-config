@@ -8,7 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ./xfce.nix
+      #./xfce.nix
     ];
 
   # Bootloader.
@@ -47,15 +47,11 @@
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
-  # Enable the XFCE Desktop Environment.
-  services.xserver.displayManager.lightdm.enable = true;
-  services.xserver.desktopManager.xfce.enable = true;
-  security.pam.services.lightdm.enableGnomeKeyring = true;
-  security.pam.services.lightdm-greeters.enableGnomeKeyring = true;
-  services.gnome.gnome-keyring.enable = true;
-  environment.variables.XDG_RUNTIME_DIR = "/run/user/$UID"; # set the runtime directory
+# KDE Plasma 6 is now available on unstable
+  services.desktopManager.plasma6.enable = true;  
+  services.xserver.displayManager.sddm.wayland.enable = true;
 
-  
+
   # Configure keymap in X11
   services.xserver = {
     xkb.layout = "us";
