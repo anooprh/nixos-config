@@ -4,31 +4,7 @@
  programs.plasma = {
     enable = true;
 
-    #
-    # Some high-level settings:
-    #
-    workspace = {
-      clickItemTo = "select";
-      lookAndFeel = "org.kde.breezedark.desktop";
-      cursorTheme = "Bibata-Modern-Ice";
-      iconTheme = "Papirus-Dark";
-      wallpaper = "${pkgs.libsForQt5.plasma-workspace-wallpapers}/share/wallpapers/Scarlet Tree/contents/images/1080x1920.png";
-    };
-
-    hotkeys.commands."launch-konsole" = {
-      name = "Launch Konsole";
-      key = "Meta+Alt+K";
-      command = "konsole";
-    };
-
-    fonts = {
-      general = {
-        family = "JetBrains Mono";
-        pointSize = 12;
-      };
-    };
-
-    panels = [
+        panels = [
       # Windows-like panel at the bottom
       {
         location = "bottom";
@@ -85,43 +61,5 @@
         ];
       }
     ];
-
-
-    #
-    # Some mid-level settings:
-    #
-    shortcuts = {
-      ksmserver = {
-        "Lock Session" = [ "Screensaver" "Meta+Ctrl+Alt+L" ];
-      };
-
-      kwin = {
-        "Expose" = "Meta+,";
-        "Switch Window Down" = "Meta+J";
-        "Switch Window Left" = "Meta+H";
-        "Switch Window Right" = "Meta+L";
-        "Switch Window Up" = "Meta+K";
-      };
-    };
-
-
-    #
-    # Some low-level settings:
-    #
-    configFile = {
-      baloofilerc."Basic Settings"."Indexing-Enabled" = false;
-      kwinrc."org.kde.kdecoration2".ButtonsOnLeft = "SF";
-      kwinrc.Desktops.Number = {
-        value = 8;
-        # Forces kde to not change this value (even through the settings app).
-        immutable = true;
-      };
-      kscreenlockerrc = {
-        Greeter.WallpaperPlugin = "org.kde.potd";
-        # To use nested groups use / as a separator. In the below example,
-        # Provider will be added to [Greeter][Wallpaper][org.kde.potd][General].
-        "Greeter/Wallpaper/org.kde.potd/General".Provider = "bing";
-      };
-    };
-  };
+ };
 }
