@@ -3,7 +3,7 @@
 {
   imports = [
     #./xfce/xfce-home.nix
-    ./kde.nix;
+    ./kde.nix
     ./browsers.nix
     ./git.nix
     ./shells.nix
