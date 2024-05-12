@@ -15,6 +15,8 @@
       { 
         # Bitwarden
         id = "nngceckbapebfimnlniiiahkandclblb";
+        # KDE Plasma Integration
+        id = "cimiefiiaegbelhefglklhhakcgmhkai";
       } 
     ];
   };
