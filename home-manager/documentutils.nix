@@ -7,10 +7,10 @@
     pdfchain
     pdfrip
     pdf4qt
-    pdfslicer
+    #pdfslicer
     pdfmixtool
     pdfarranger
-    pdfstudioviewer
+    #pdfstudioviewer
 
   ];
 }
