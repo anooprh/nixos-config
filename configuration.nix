@@ -9,6 +9,7 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       #./xfce.nix
+      ./kde.nix
     ];
 
   # Bootloader.
