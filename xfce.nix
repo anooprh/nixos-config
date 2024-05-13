@@ -66,9 +66,6 @@
     ];
   };
 
-  hardware = {
-    bluetooth.enable = true;
-  };
 
   programs = {
     xfconf.enable = true;
