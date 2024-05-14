@@ -10,6 +10,7 @@
     ./terminal-emulators.nix
     ./flameshot.nix
     ./documentutils.nix
+    ./vscode.nix
   ];
   
   # TODO please change the username & home directory to your own
@@ -90,18 +91,6 @@
     ethtool
     pciutils # lspci
     usbutils # lsusb
-
-
-    ## Development Tools
-    vscode
-
-    jetbrains.webstorm
-    jetbrains.pycharm-community
-    jetbrains.jdk
-    jetbrains.idea-community
-    jetbrains.goland
-    jetbrains.clion
-
   ];
   
   # This value determines the home Manager release that your

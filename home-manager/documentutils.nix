@@ -12,5 +12,11 @@
     pdfarranger
     #pdfstudioviewer
 
+    # Tex
+    texliveTeTeX
+    texliveFull
+    latex2html
+    latex2mathml
+
   ];
 }
