@@ -8,7 +8,7 @@
     ./git.nix
     ./shells.nix
     ./terminal-emulators.nix
-    ./flameshot.nix
+    ./multimedia.nix
     ./documentutils.nix
     ./devtools.nix
   ];

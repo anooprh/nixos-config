@@ -17,4 +17,10 @@
       };
     };
   };
+
+  # Radio Player
+  home.packages = with pkgs; [
+    tuner
+  ];
+
 }
