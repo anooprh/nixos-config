@@ -1,9 +1,9 @@
 { inputs, config, pkgs, lib, ... }:
 
 {
-  home.packages = with pkgs; [
-    libsForQt5.kdeconnect-kde
-  ];
+  #home.packages = with pkgs; [
+  #  libsForQt5.kdeconnect-kde
+  #];
 
  programs.plasma = {
    enable = true;

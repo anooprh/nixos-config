@@ -10,7 +10,7 @@
     ./terminal-emulators.nix
     ./flameshot.nix
     ./documentutils.nix
-    ./vscode.nix
+    ./devtools.nix
   ];
   
   # TODO please change the username & home directory to your own

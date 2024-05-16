@@ -13,7 +13,7 @@
     #pdfstudioviewer
 
     # Tex
-    texliveTeTeX
+    #texliveTeTeX
     texliveFull
     latex2html
     latex2mathml
