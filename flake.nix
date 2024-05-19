@@ -34,6 +34,7 @@
       modules = [
         # Import the previous configuration.nix we used,
         # so the old configuration file still takes effect
+        ./machines/hpspectre/hardware-configuration.nix
         ./configuration.nix
         ./users.nix
 

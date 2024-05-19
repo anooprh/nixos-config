@@ -5,17 +5,13 @@
 { config, pkgs, ... }:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-    ];
-
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.systemd-boot.configurationLimit = 5;
   boot.loader.efi.canTouchEfiVariables = true;
 
   # Enable networking
+  # TODO : Move this out
   networking.hostName = "hpspectre"; # Define your hostname.
   networking.networkmanager.enable = true;
 
