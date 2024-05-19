@@ -49,7 +49,7 @@
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
           home-manager.sharedModules = [ plasma-manager.homeManagerModules.plasma-manager ];
-          home-manager.users.${username} = import ./home-manager/home.nix;
+          home-manager.users.${user.name} = import ./home-manager/home.nix;
 
           # Optionally, use home-manager.extraSpecialArgs to pass arguments to home.nix
           home-manager.extraSpecialArgs = { inherit inputs; };
