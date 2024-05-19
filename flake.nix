@@ -1,5 +1,5 @@
 {
-  description = "A very basic flak=";
+  description = "A very basic flake";
 
   inputs = {
     # NixOS official package source, using the nixos-unstable branch here
@@ -12,6 +12,7 @@
       # to avoid problems caused by different versions of nixpkgs.
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    
     firefox-addons = {
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";

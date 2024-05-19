@@ -8,8 +8,6 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      #./xfce.nix
-      ./kde.nix
     ];
 
   # Bootloader.
@@ -17,14 +15,8 @@
   boot.loader.systemd-boot.configurationLimit = 5;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "hpspectre"; # Define your hostname.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-
   # Enable networking
+  networking.hostName = "hpspectre"; # Define your hostname.
   networking.networkmanager.enable = true;
 
   # Set your time zone.
@@ -45,19 +37,27 @@
     LC_TIME = "en_IN";
   };
 
-  # Enable the X11 windowing system.
-  services.xserver.enable = true;
+
+  services.xserver = {
+    # Enable the X11 windowing system.
+    enable = true;
+    
+    # Configure keymap in X11
+    xkb.layout = "us";
+    xkb.variant = "";
+
+    # Enable touchpad support (enabled default in most desktopManager).
+    libinput.enable = true;
+
+    # Enable sddm displayManager on wayland
+    displayManager.sddm.wayland.enable = true;
+
+    # Disable automatic login.
+    displayManager.autoLogin.enable = false;
+  };
 
   # KDE Plasma 6 is now available on unstable
   services.desktopManager.plasma6.enable = true;  
-  services.xserver.displayManager.sddm.wayland.enable = true;
-
-
-  # Configure keymap in X11
-  services.xserver = {
-    xkb.layout = "us";
-    xkb.variant = "";
-  };
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
@@ -83,9 +83,12 @@
     bluetooth.enable = true;
   };
 
+  # Enable PAM Services via kwallet
+  security.pam.services.kwallet = {
+    name = "kwallet";
+    enableKwallet = true;
+  };
 
-  # Enable touchpad support (enabled default in most desktopManager).
-  # services.xserver.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.anoop = {
@@ -95,17 +98,13 @@
     shell = pkgs.zsh;
   };
 
-  # Enable automatic login for the user.
-  services.xserver.displayManager.autoLogin.enable = true;
-  services.xserver.displayManager.autoLogin.user = "anoop";
-
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    vim 
     tmux
     wget
     curl
@@ -118,11 +117,11 @@
   
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
+  programs.mtr.enable = true;
+  programs.gnupg.agent = {
+    enable = true;
+    enableSSHSupport = true;
+  };
 
   # List services that you want to enable:
 
@@ -130,10 +129,6 @@
   # services.openssh.enable = true;
 
   # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
-  # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
   networking.firewall = { 
     enable = true;
     allowedTCPPortRanges = [ 
@@ -164,5 +159,6 @@
   virtualisation.virtualbox.host.enableExtensionPack = true;
   virtualisation.virtualbox.guest.enable = true;
   virtualisation.virtualbox.guest.seamless = true;
+  
   users.extraGroups.vboxusers.members = [ "anoop" ];
 }
