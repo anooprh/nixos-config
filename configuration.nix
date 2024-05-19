@@ -54,7 +54,6 @@
 
     # Disable automatic login.
     displayManager.autoLogin.enable = true;
-    displayManager.autoLogin.user = "anoop";
   };
 
   # KDE Plasma 6 is now available on unstable
@@ -88,15 +87,6 @@
   security.pam.services.kwallet = {
     name = "kwallet";
     enableKwallet = true;
-  };
-
-
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.anoop = {
-    isNormalUser = true;
-    description = "Anoop Hallur";
-    extraGroups = [ "networkmanager" "wheel" "audio" "vboxusers" ];
-    shell = pkgs.zsh;
   };
 
   # Allow unfree packages
@@ -160,6 +150,4 @@
   virtualisation.virtualbox.host.enableExtensionPack = true;
   virtualisation.virtualbox.guest.enable = true;
   virtualisation.virtualbox.guest.seamless = true;
-  
-  users.extraGroups.vboxusers.members = [ "anoop" ];
 }
