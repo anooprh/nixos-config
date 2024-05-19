@@ -1,4 +1,4 @@
-{ inputs, config, pkgs, ... }:
+{ inputs, config, pkgs, user, ... }:
 
 {
   imports = [
@@ -13,17 +13,10 @@
     ./devtools.nix
   ];
   
-  # TODO please change the username & home directory to your own
-  home.username = "anoop";
-  home.homeDirectory = "/home/anoop";
+  home.username = "${user.name}";
+  home.homeDirectory = "/home/${user.name}";
 
  
-  # set cursor size and dpi for 4k monitor
-  # xresources.properties = {
-  #  "Xcursor.size" = 16;
-  #  "Xft.dpi" = 172;
-  # };
-
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
     # here is some command line tools I use frequently
