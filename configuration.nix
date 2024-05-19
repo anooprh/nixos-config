@@ -53,7 +53,8 @@
     displayManager.sddm.wayland.enable = true;
 
     # Disable automatic login.
-    displayManager.autoLogin.enable = false;
+    displayManager.autoLogin.enable = true;
+    displayManager.autoLogin.user = "anoop";
   };
 
   # KDE Plasma 6 is now available on unstable
@@ -93,7 +94,7 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.anoop = {
     isNormalUser = true;
-    description = "anoop";
+    description = "Anoop Hallur";
     extraGroups = [ "networkmanager" "wheel" "audio" "vboxusers" ];
     shell = pkgs.zsh;
   };

@@ -24,7 +24,11 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, plasma-manager, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, plasma-manager, ... }@inputs: 
+  let 
+    username = "anoop";
+  in
+  {
     nixosConfigurations.hpspectre = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
