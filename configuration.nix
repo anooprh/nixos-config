@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, hostname, ... }:
 
 {
   # Bootloader.
@@ -11,8 +11,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   # Enable networking
-  # TODO : Move this out
-  networking.hostName = "hpspectre"; # Define your hostname.
+  networking.hostName = "${hostname}";
   networking.networkmanager.enable = true;
 
   # Set your time zone.

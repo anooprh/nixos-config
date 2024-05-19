@@ -26,18 +26,22 @@
 
   outputs = { self, nixpkgs, home-manager, plasma-manager, ... }@inputs: 
   let 
-    username = "anoop";
+    user = {
+      name = "anoop";
+      description = "Anoop H";
+    };
     hostname = "hpspectre";
+    system = "x86_64-linux";
   in
   {
     nixosConfigurations.${hostname} = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
+      inherit system;
       modules = [
         # Import the previous configuration.nix we used,
         # so the old configuration file still takes effect
         ./machines/${hostname}/hardware-configuration.nix
-        ./configuration.nix
-        ./users.nix
+        ./configuration.nix { _module.args = { inherit hostname; };}
+        ./users.nix { _module.args = { inherit user; };}
 
   	    # make home-manager as a module of nixos
         # so that home-manager configuration will be deployed automatically when executing `nixos-rebuild switch`

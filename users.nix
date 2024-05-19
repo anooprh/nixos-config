@@ -2,21 +2,21 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, user, ... }:
 
 {
 
   services.xserver = {
-    displayManager.autoLogin.user = "anoop";
+    displayManager.autoLogin.user = "${user.name}";
   };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.anoop = {
+  users.users.${user.name} = {
     isNormalUser = true;
-    description = "Anoop Hallur";
+    description = "${user.description}";
     extraGroups = [ "networkmanager" "wheel" "audio" "vboxusers" ];
     shell = pkgs.zsh;
   };
 
-  users.extraGroups.vboxusers.members = [ "anoop" ];
+  users.extraGroups.vboxusers.members = [ "${user.name}" ];
 }
