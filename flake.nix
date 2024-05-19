@@ -27,14 +27,15 @@
   outputs = { self, nixpkgs, home-manager, plasma-manager, ... }@inputs: 
   let 
     username = "anoop";
+    hostname = "hpspectre";
   in
   {
-    nixosConfigurations.hpspectre = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.${hostname} = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
         # Import the previous configuration.nix we used,
         # so the old configuration file still takes effect
-        ./machines/hpspectre/hardware-configuration.nix
+        ./machines/${hostname}/hardware-configuration.nix
         ./configuration.nix
         ./users.nix
 
@@ -44,7 +45,7 @@
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
           home-manager.sharedModules = [ plasma-manager.homeManagerModules.plasma-manager ];
-          home-manager.users.anoop = import ./home-manager/home.nix;
+          home-manager.users.${username} = import ./home-manager/home.nix;
 
           # Optionally, use home-manager.extraSpecialArgs to pass arguments to home.nix
           home-manager.extraSpecialArgs = { inherit inputs; };
