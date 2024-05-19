@@ -47,7 +47,6 @@
     # Enable sddm displayManager on wayland
     displayManager.sddm.enable = true;
     displayManager.sddm.wayland.enable = true;
-    displayManager.sddm.autoNumlock = true;
 
     # Disable automatic login.
     displayManager.autoLogin.enable = true;

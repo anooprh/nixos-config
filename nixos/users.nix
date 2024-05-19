@@ -6,9 +6,9 @@
 
 {
 
-  services.xserver = {
-    displayManager.autoLogin.user = "${user.name}";
-  };
+  # services.xserver = {
+  #   displayManager.autoLogin.user = "${user.name}";
+  # };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.${user.name} = {
