@@ -47,9 +47,6 @@
     # Enable sddm displayManager on wayland
     displayManager.sddm.enable = true;
     displayManager.sddm.wayland.enable = true;
-
-    # Disable automatic login.
-    displayManager.autoLogin.enable = true;
   };
 
   # KDE Plasma 6 is now available on unstable

@@ -6,9 +6,11 @@
 
 {
 
-  # services.xserver = {
+  services.xserver = {
+  #   Disable automatic login.
   #   displayManager.autoLogin.user = "${user.name}";
-  # };
+      displayManager.autoLogin.enable = false;
+  };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.${user.name} = {
