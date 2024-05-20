@@ -5,6 +5,6 @@
   programs.git = {
     enable = true;
     userName = "Anoop Hallur";
-    userEmail = "anoophallur.com";
+    userEmail = "anoophallur@gmail.com";
   };
 }
