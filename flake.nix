@@ -31,6 +31,7 @@
     };
     hostname = "hpspectre";
     system = "x86_64-linux";
+    baseVersion = "23.11";
   in
   {
     nixosConfigurations.${hostname} = nixpkgs.lib.nixosSystem {
@@ -39,7 +40,7 @@
         # Import the previous configuration.nix we used,
         # so the old configuration file still takes effect
         ./machines/${hostname}/hardware-configuration.nix
-        ./nixos/configuration.nix { _module.args = { inherit hostname; };}
+        ./nixos/configuration.nix { _module.args = { inherit hostname baseVersion; };}
         ./nixos/users.nix { _module.args = { inherit user; };}
 
   	    # make home-manager as a module of nixos
@@ -48,10 +49,24 @@
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
           home-manager.sharedModules = [ plasma-manager.homeManagerModules.plasma-manager ];
-          home-manager.users.${user.name} = import ./home-manager/home.nix;
-
-          # Optionally, use home-manager.extraSpecialArgs to pass arguments to home.nix
-          home-manager.extraSpecialArgs = { inherit inputs user; };
+          home-manager.users.${user.name} = {
+            home.username = "${user.name}";
+            home.homeDirectory = "/home/${user.name}";
+            home.stateVersion = ${baseVersion};
+            programs.home-manager.enable = true;
+          };
+          home-manager.users.${user.name}.imports = [
+            ./home/${user.name}/kde.nix
+            # ./home/${user.name}/xfce
+            ./home/${user.name}/browsers.nix
+            ./home/${user.name}/git.nix
+            ./home/${user.name}/shells.nix
+            ./home/${user.name}/terminal-emulators.nix
+            ./home/${user.name}/multimedia.nix
+            ./home/${user.name}/documentutils.nix
+            ./home/${user.name}/devtools.nix
+            ./home/${user.name}/utils.nix
+          ];
         }
       ];
     };

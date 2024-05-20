@@ -1,22 +1,6 @@
-{ inputs, config, pkgs, user, ... }:
+{ inputs, config, pkgs, ... }:
 
 {
-  imports = [
-    #./xfce/xfce-home.nix
-    ./kde.nix
-    ./browsers.nix
-    ./git.nix
-    ./shells.nix
-    ./terminal-emulators.nix
-    ./multimedia.nix
-    ./documentutils.nix
-    ./devtools.nix
-  ];
-  
-  home.username = "${user.name}";
-  home.homeDirectory = "/home/${user.name}";
-
- 
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
     # here is some command line tools I use frequently
@@ -86,16 +70,4 @@
     usbutils # lsusb
   ];
   
-  # This value determines the home Manager release that your
-  # configuration is compatible with. This helps avoid breakage
-  # when a new home Manager release introduces backwards
-  # incompatible changes.
-  #
-  # You can update home Manager without changing this value. See
-  # the home Manager release notes for a list of state version
-  # changes in each release.
-  home.stateVersion = "23.11";
-
-  # Let home Manager install and manage itself.
-  programs.home-manager.enable = true;
 }
