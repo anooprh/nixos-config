@@ -49,24 +49,25 @@
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
           home-manager.sharedModules = [ plasma-manager.homeManagerModules.plasma-manager ];
+          home-manager.extraSpecialArgs = { inherit inputs user; };
           home-manager.users.${user.name} = {
             home.username = "${user.name}";
             home.homeDirectory = "/home/${user.name}";
-            home.stateVersion = ${baseVersion};
+            home.stateVersion = "${baseVersion}";
             programs.home-manager.enable = true;
+            imports = [
+              ./home/${user.name}/kde.nix
+              # ./home/${user.name}/xfce
+              ./home/${user.name}/browsers.nix
+              ./home/${user.name}/git.nix
+              ./home/${user.name}/shells.nix
+              ./home/${user.name}/terminal-emulators.nix
+              ./home/${user.name}/multimedia.nix
+              ./home/${user.name}/documentutils.nix
+              ./home/${user.name}/devtools.nix
+              ./home/${user.name}/utils.nix
+            ];
           };
-          home-manager.users.${user.name}.imports = [
-            ./home/${user.name}/kde.nix
-            # ./home/${user.name}/xfce
-            ./home/${user.name}/browsers.nix
-            ./home/${user.name}/git.nix
-            ./home/${user.name}/shells.nix
-            ./home/${user.name}/terminal-emulators.nix
-            ./home/${user.name}/multimedia.nix
-            ./home/${user.name}/documentutils.nix
-            ./home/${user.name}/devtools.nix
-            ./home/${user.name}/utils.nix
-          ];
         }
       ];
     };
