@@ -6,6 +6,10 @@
   services.xserver.displayManager.sddm.wayland.enable = true;
   services.desktopManager.plasma6.enable = true;
 
+  environment.systemPackages = with pkgs; [
+   kdePackages.kdeconnect-kde
+  ];
+
   # Open ports in the firewall.
   networking.firewall = { 
     enable = true;
@@ -22,5 +26,4 @@
     name = "kwallet";
     enableKwallet = true;
   };
-
 }
