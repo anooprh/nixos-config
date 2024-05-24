@@ -5,6 +5,13 @@
 { config, pkgs, hostname, baseVersion, ... }:
 
 {
+  imports = [
+    # Desktop Environments; Choose One
+    # ./desktopEnvironments/gnome.nix
+    ./desktopEnvironments/kde.nix
+    # ./desktopEnvironments/xfce.nix
+  ];
+
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.systemd-boot.configurationLimit = 5;
@@ -43,17 +50,7 @@
 
     # Enable touchpad support (enabled default in most desktopManager).
     libinput.enable = true;
-
-    # Enable sddm displayManager on wayland
-    displayManager.sddm.enable = true;
-    displayManager.sddm.wayland.enable = true;
-  };
-
-  # KDE Plasma 6 is now available on unstable
-  services.desktopManager.plasma6.enable = true;
-  
-  # Enable Gnome
-  # services.xserver.desktopManager.gnome.enable = true;
+  };  
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
@@ -77,12 +74,6 @@
 
   hardware = {
     bluetooth.enable = true;
-  };
-
-  # Enable PAM Services via kwallet
-  security.pam.services.kwallet = {
-    name = "kwallet";
-    enableKwallet = true;
   };
 
   # Allow unfree packages
@@ -114,17 +105,6 @@
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
-
-  # Open ports in the firewall.
-  networking.firewall = { 
-    enable = true;
-    allowedTCPPortRanges = [ 
-      { from = 1714; to = 1764; } # KDE Connect
-    ];  
-    allowedUDPPortRanges = [ 
-      { from = 1714; to = 1764; } # KDE Connect
-    ];  
-  };  
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
