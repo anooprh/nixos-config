@@ -10,10 +10,11 @@ Go to [NixOS Downloads](https://nixos.org/download/#) and install the latest Nix
 
 [Arch Wiki](https://wiki.archlinux.org/title/USB_flash_installation_medium) has a comprehensive documentation on how to create a bootable/live USB depending on your current Operating System. The instructions in the doc are for Arch Linux ISO, but are applicable to any flavour of linux. 
 
-### TODO
+## TODO
 
 - Setup impermanance
 - Build Generic ISO
 - Configure Vscode
 - Setup per machine options
 - Setup a profile for VM
+- KDE Widgets

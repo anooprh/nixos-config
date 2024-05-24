@@ -9,7 +9,8 @@
 
     shellAliases = {
         k = "kubectl"; 
-        p = "cd ~/Workspace";  
+        p = "cd ~/Workspace"; 
+        ls = "eza";
     };
     history.size = 1000000;
     history.path = "${config.xdg.dataHome}/zsh/history";

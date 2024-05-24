@@ -50,7 +50,10 @@
   };
 
   # KDE Plasma 6 is now available on unstable
-  services.desktopManager.plasma6.enable = true;  
+  services.desktopManager.plasma6.enable = true;
+  
+  # Enable Gnome
+  services.xserver.desktopManager.gnome.enable = true;
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
