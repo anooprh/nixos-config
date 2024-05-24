@@ -35,8 +35,12 @@
 
   dconf.settings = {
    "org/gnome/desktop/interface" = {
-      color-scheme = "prefer-dark";
+      color-scheme = "prefer-light";
       enable-hot-corners = false;
+      clock-format = "12h";
+      clock-show-weekday = true;
+      clock-show-seconds = true;
+      show-battery-percentage = true;
     };
     "org/gnome/desktop/wm/preferences" = {
       workspace-names = [ "Main" ];
@@ -52,28 +56,22 @@
     "org/gnome/shell/extensions/user-theme" = {
       name = "palenight";
     };
-    "/org/gnome/desktop/interface" = {
-      clock-format = "12h";
-      clock-show-weekday = true;
-      clock-show-seconds = true;
-      show-battery-percentage = true;
-    };
-    "/org/gtk/settings/file-chooser" = {
+    "org/gtk/settings/file-chooser" = {
       clock-format = "12h";
     };
-    "/org/gnome/desktop/peripherals/touchpad" = {
+    "org/gnome/desktop/peripherals/touchpad" = {
       tap-to-click = true;
     };
-    "/org/gnome/settings-daemon/plugins/color" = {
+    "org/gnome/settings-daemon/plugins/color" = {
       night-light-enabled = true;
       night-light-schedule-automatic = true;
     };
-    "/org/gnome/mutter" = {
+    "org/gnome/mutter" = {
       edge-tiling = true;
       dynamic-workspaces = true;
       workspaces-only-on-primary = true;
     };
-    "/org/gnome/shell/app-switcher" = {
+    "org/gnome/shell/app-switcher" = {
       current-workspace-only = true;
     };
   };
