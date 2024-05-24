@@ -1,33 +1,11 @@
 {
   description = "System Flake";
-
-  inputs = {
-    # NixOS official package source, using the nixos-unstable branch here
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    home-manager = {
-      url = "github:nix-community/home-manager";
-      # The `follows` keyword in inputs is used for inheritance.
-      # Here, `inputs.nixpkgs` of home-manager is kept consistent with
-      # the `inputs.nixpkgs` of the current flake,
-      # to avoid problems caused by different versions of nixpkgs.
-      inputs.nixpkgs.follows = "nixpkgs";
-    };   
-    firefox-addons = {
-      url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    plasma-manager = {
-      url = "github:pjones/plasma-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.home-manager.follows = "home-manager";
-    };
-  };
-
   outputs = { self, nixpkgs, home-manager, plasma-manager, ... }@inputs: 
   let 
     user = {
       name = "anoop";
       description = "Anoop Hallur";
+      email = "anoophallur@gmail.com";
     };
     hostname = "hpspectre";
     dekstopEnv = "gnome" ;# Set to one of "gnome", "xfce", "kde"
@@ -72,4 +50,26 @@
       ];
     };
   };
+  inputs = {
+    # NixOS official package source, using the nixos-unstable branch here
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      # The `follows` keyword in inputs is used for inheritance.
+      # Here, `inputs.nixpkgs` of home-manager is kept consistent with
+      # the `inputs.nixpkgs` of the current flake,
+      # to avoid problems caused by different versions of nixpkgs.
+      inputs.nixpkgs.follows = "nixpkgs";
+    };   
+    firefox-addons = {
+      url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    plasma-manager = {
+      url = "github:pjones/plasma-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.home-manager.follows = "home-manager";
+    };
+  };
+
 }

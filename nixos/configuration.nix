@@ -5,18 +5,14 @@
 { config, pkgs, hostname, baseVersion, dekstopEnv, ... }:
 
 {
-  imports =
-    if dekstopEnv == "gnome" then
-      [ ./desktopEnvironments/gnome.nix ]
-    else if dekstopEnv == "kde" then
-      [ ./desktopEnvironments/kde.nix ]
-    else if dekstopEnv == "xfce" then
-      [ ./desktopEnvironments/xfce.nix ]
-    else
-      [ ./desktopEnvironments/none.nix ]
-    ;
+  imports = [
+    # Desktop Environments; Choose One among the list below
+    ./desktopEnvironments/gnome.nix
+    # ./desktopEnvironments/kde.nix
+    # ./desktopEnvironments/xfce.nix
+  ];
 
-  # Bootloader
+  # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.systemd-boot.configurationLimit = 5;
   boot.loader.efi.canTouchEfiVariables = true;
