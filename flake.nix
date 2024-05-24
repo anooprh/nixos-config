@@ -35,15 +35,15 @@
             home.stateVersion = "${baseVersion}";
             programs.home-manager.enable = true;
             imports = [
-              ./home/${user.name}/desktopEnvironments
-              ./home/${user.name}/browsers.nix
-              ./home/${user.name}/git.nix
-              ./home/${user.name}/shells.nix
-              ./home/${user.name}/terminal-emulators.nix
-              ./home/${user.name}/multimedia.nix
-              ./home/${user.name}/documentutils.nix
-              ./home/${user.name}/devtools.nix
-              ./home/${user.name}/utils.nix
+              ./home/desktopEnvironments
+              ./home/browsers.nix
+              ./home/git.nix
+              ./home/shells.nix
+              ./home/terminal-emulators.nix
+              ./home/multimedia.nix
+              ./home/documentutils.nix
+              ./home/devtools.nix
+              ./home/utils.nix
             ];
           };
         }

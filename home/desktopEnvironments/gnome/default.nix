@@ -51,10 +51,19 @@
       enabled-extensions = [
         "Vitals@CoreCoding.com"
         "sound-output-device-chooser@kgshank.net"
+        "applications-menu"
+        "app-menu-is-back"
+        "arcmenu"
+        "window-title-is-back"
+        "bluetooth-battery-meter"
       ];
     };
     "org/gnome/shell/extensions/user-theme" = {
       name = "palenight";
+    };
+    "org/gnome/shell/extensions/vitals" = {
+      hide-zeros = true;
+      network-speed-format = 1; # bits/second
     };
     "org/gtk/settings/file-chooser" = {
       clock-format = "12h";
@@ -77,8 +86,13 @@
   };
 
   home.packages = with pkgs; [
+    palenight-theme
     gnomeExtensions.vitals
     gnomeExtensions.sound-output-device-chooser
-    palenight-theme
+    gnomeExtensions.applications-menu
+    gnomeExtensions.app-menu-is-back
+    gnomeExtensions.arcmenu
+    gnomeExtensions.window-title-is-back
+    gnomeExtensions.bluetooth-battery-meter
   ];
 }
