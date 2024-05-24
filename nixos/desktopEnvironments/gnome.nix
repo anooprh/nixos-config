@@ -4,6 +4,7 @@
   # Enable Gnome
   services.xserver.desktopManager.gnome.enable = true;
   services.xserver.displayManager.gdm.enable = true;
+  services.xserver.displayManager.gdm.wayland = true;
 
   # Systray icons
   environment.systemPackages = with pkgs; [ 
