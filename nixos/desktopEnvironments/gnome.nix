@@ -6,10 +6,13 @@
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.displayManager.gdm.wayland = true;
 
+  programs.dconf.enable = true;
+  
   # Systray icons
   environment.systemPackages = with pkgs; [ 
     gnomeExtensions.appindicator
     gnome.gnome-settings-daemon
+    gnome.gnome-tweaks
   ];
 
   services.dbus.packages = with pkgs; [ 

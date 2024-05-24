@@ -56,8 +56,7 @@
             home.stateVersion = "${baseVersion}";
             programs.home-manager.enable = true;
             imports = [
-              ./home/${user.name}/kde.nix
-              # ./home/${user.name}/xfce
+              ./home/${user.name}/desktopEnvironments
               ./home/${user.name}/browsers.nix
               ./home/${user.name}/git.nix
               ./home/${user.name}/shells.nix
