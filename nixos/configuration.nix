@@ -53,7 +53,7 @@
   services.desktopManager.plasma6.enable = true;
   
   # Enable Gnome
-  services.xserver.desktopManager.gnome.enable = true;
+  # services.xserver.desktopManager.gnome.enable = true;
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
