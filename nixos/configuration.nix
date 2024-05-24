@@ -2,17 +2,21 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, hostname, baseVersion, ... }:
+{ config, pkgs, hostname, baseVersion, dekstopEnv, ... }:
 
 {
   imports = [
-    # Desktop Environments; Choose One among the list below
-    ./desktopEnvironments/gnome.nix
-    # ./desktopEnvironments/kde.nix
-    # ./desktopEnvironments/xfce.nix
+    if dekstopEnv == "gnome" then
+      ./desktopEnvironments/gnome.nix
+    else if dekstopEnv == "kde" then
+      ./desktopEnvironments/kde.nix
+    else if dekstopEnv == "xfce" then
+      ./desktopEnvironments/xfce.nix
+    else
+      ./desktopEnvironments/none.nix
   ];
 
-  # Bootloader.
+  # Bootloader
   boot.loader.systemd-boot.enable = true;
   boot.loader.systemd-boot.configurationLimit = 5;
   boot.loader.efi.canTouchEfiVariables = true;

@@ -1,5 +1,5 @@
 {
-  description = "A very basic flake";
+  description = "System Flake";
 
   inputs = {
     # NixOS official package source, using the nixos-unstable branch here
@@ -30,6 +30,7 @@
       description = "Anoop Hallur";
     };
     hostname = "hpspectre";
+    dekstopEnv = "gnome" ;# Set to one of "gnome", "xfce", "kde"
     system = "x86_64-linux";
     baseVersion = "23.11";
   in
@@ -40,7 +41,7 @@
         # Import the previous configuration.nix we used,
         # so the old configuration file still takes effect
         ./machines/${hostname}/hardware-configuration.nix
-        ./nixos/configuration.nix { _module.args = { inherit hostname baseVersion; };}
+        ./nixos/configuration.nix { _module.args = { inherit hostname baseVersion dekstopEnv; };}
         ./nixos/users.nix { _module.args = { inherit user; };}
 
   	    # make home-manager as a module of nixos
