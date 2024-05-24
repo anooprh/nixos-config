@@ -10,9 +10,11 @@
   
   # Systray icons
   environment.systemPackages = with pkgs; [ 
+    dconf
     gnomeExtensions.appindicator
     gnome.gnome-settings-daemon
     gnome.gnome-tweaks
+    gnome.dconf-editor
   ];
 
   services.dbus.packages = with pkgs; [ 
