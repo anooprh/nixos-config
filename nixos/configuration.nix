@@ -5,16 +5,16 @@
 { config, pkgs, hostname, baseVersion, dekstopEnv, ... }:
 
 {
-  imports = [
+  imports =
     if dekstopEnv == "gnome" then
-      ./desktopEnvironments/gnome.nix
+      [ ./desktopEnvironments/gnome.nix ]
     else if dekstopEnv == "kde" then
-      ./desktopEnvironments/kde.nix
+      [ ./desktopEnvironments/kde.nix ]
     else if dekstopEnv == "xfce" then
-      ./desktopEnvironments/xfce.nix
+      [ ./desktopEnvironments/xfce.nix ]
     else
-      ./desktopEnvironments/none.nix
-  ];
+      [ ./desktopEnvironments/none.nix ]
+    ;
 
   # Bootloader
   boot.loader.systemd-boot.enable = true;
