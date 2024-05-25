@@ -42,20 +42,17 @@
       clock-show-seconds = true;
       show-battery-percentage = true;
     };
-    "org/gnome/desktop/wm/preferences" = {
-      workspace-names = [ "Main" ];
-    };
     "org/gnome/shell" = {
       disable-user-extensions = false;
       # `gnome-extensions list` for a list
       enabled-extensions = [
         "Vitals@CoreCoding.com"
-        "sound-output-device-chooser@kgshank.net"
-        "applications-menu"
-        "app-menu-is-back"
-        "arcmenu"
-        "window-title-is-back"
-        "bluetooth-battery-meter"
+        "Bluetooth-Battery-Meter@maniacx.github.com"
+        "appmenu-is-back@fthx"
+        "apps-menu@gnome-shell-extensions.gcampax.github.com"
+        "appindicatorsupport@rgcjonas.gmail.com"
+        "auto-move-windows@gnome-shell-extensions.gcampax.github.com"
+        "workspace-indicator@gnome-shell-extensions.gcampax.github.com"
       ];
     };
     "org/gnome/shell/extensions/user-theme" = {
@@ -77,7 +74,7 @@
     };
     "org/gnome/mutter" = {
       edge-tiling = true;
-      dynamic-workspaces = true;
+      dynamic-workspaces = false;
       workspaces-only-on-primary = true;
     };
     "org/gnome/shell/app-switcher" = {
@@ -88,11 +85,9 @@
   home.packages = with pkgs; [
     palenight-theme
     gnomeExtensions.vitals
-    gnomeExtensions.sound-output-device-chooser
-    gnomeExtensions.applications-menu
-    gnomeExtensions.app-menu-is-back
-    gnomeExtensions.arcmenu
-    gnomeExtensions.window-title-is-back
     gnomeExtensions.bluetooth-battery-meter
+    gnomeExtensions.app-menu-is-back
+    gnomeExtensions.applications-menu
+    gnomeExtensions.auto-move-windows
   ];
 }

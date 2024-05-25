@@ -87,6 +87,7 @@
     wget
     curl
     git
+    gparted
   ];
   environment.variables.EDITOR = "vim";
   environment.shells = with pkgs; [ zsh ];

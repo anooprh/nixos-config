@@ -16,6 +16,8 @@
     gnome.gnome-tweaks
     gnome.dconf-editor
     gnome.gpaste
+    gnome-menus
+    gnome.gpaste
   ];
 
   services.dbus.packages = with pkgs; [ 

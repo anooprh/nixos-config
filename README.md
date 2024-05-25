@@ -17,4 +17,4 @@ Go to [NixOS Downloads](https://nixos.org/download/#) and install the latest Nix
 - Configure Vscode
 - Setup per machine options
 - Setup a profile for VM
-- KDE Widgets
+- Configurable to gnome/kde/xfce
