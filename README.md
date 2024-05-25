@@ -16,5 +16,6 @@ Go to [NixOS Downloads](https://nixos.org/download/#) and install the latest Nix
 - Build Generic ISO
 - Configure Vscode
 - Setup per machine options
+- Multiple users per machine
 - Setup a profile for VM
 - Configurable to gnome/kde/xfce

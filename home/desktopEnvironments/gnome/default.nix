@@ -89,5 +89,6 @@
     gnomeExtensions.app-menu-is-back
     gnomeExtensions.applications-menu
     gnomeExtensions.auto-move-windows
+    gnomeExtensions.user-themes
   ];
 }
