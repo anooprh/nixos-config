@@ -29,4 +29,7 @@
 
   # Automatic screen rotation
   hardware.sensor.iio.enable = true;
+
+  stylix.image = ./wallpapers/city_skyline_twilight_pixel.jpg;
+
 }
