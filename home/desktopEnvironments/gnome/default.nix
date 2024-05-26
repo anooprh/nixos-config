@@ -49,7 +49,6 @@
         "Vitals@CoreCoding.com"
         "Bluetooth-Battery-Meter@maniacx.github.com"
         "appmenu-is-back@fthx"
-        "apps-menu@gnome-shell-extensions.gcampax.github.com"
         "appindicatorsupport@rgcjonas.gmail.com"
         "auto-move-windows@gnome-shell-extensions.gcampax.github.com"
         "workspace-indicator@gnome-shell-extensions.gcampax.github.com"
@@ -92,7 +91,6 @@
     gnomeExtensions.vitals
     gnomeExtensions.bluetooth-battery-meter
     gnomeExtensions.app-menu-is-back
-    gnomeExtensions.applications-menu
     gnomeExtensions.auto-move-windows
     gnomeExtensions.user-themes
     gnomeExtensions.espresso

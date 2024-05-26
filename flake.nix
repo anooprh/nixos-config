@@ -21,7 +21,7 @@
         ./machines/${hostname}/hardware-configuration.nix
         ./nixos/configuration.nix { _module.args = { inherit hostname baseVersion dekstopEnv; };}
         ./nixos/users.nix { _module.args = { inherit user; };}
-        stylix.nixosModules.stylix
+        # stylix.nixosModules.stylix
 
   	    # make home-manager as a module of nixos
         # so that home-manager configuration will be deployed automatically when executing `nixos-rebuild switch`
@@ -72,4 +72,5 @@
       inputs.home-manager.follows = "home-manager";
     };
     stylix.url = "github:danth/stylix";
+  };
 }
