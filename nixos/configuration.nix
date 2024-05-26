@@ -130,4 +130,6 @@
   virtualisation.virtualbox.host.enableExtensionPack = true;
   virtualisation.virtualbox.guest.enable = true;
   virtualisation.virtualbox.guest.seamless = true;
+
+  stylix.image = ./../wallpapers/sample.jpg;
 }
