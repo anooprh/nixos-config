@@ -2,36 +2,36 @@
 
 {
   
-  gtk = {
-    enable = true;
+  # gtk = {
+  #   enable = true;
 
-    iconTheme = {
-      name = "Papirus-Dark";
-      package = pkgs.papirus-icon-theme;
-    };
+  #   iconTheme = {
+  #     name = "Papirus-Dark";
+  #     package = pkgs.papirus-icon-theme;
+  #   };
 
-    theme = {
-      name = "palenight";
-      package = pkgs.palenight-theme;
-    };
+  #   theme = {
+  #     name = "palenight";
+  #     package = pkgs.palenight-theme;
+  #   };
 
-    cursorTheme = {
-      name = "Numix-Cursor";
-      package = pkgs.numix-cursor-theme;
-    };
+  #   cursorTheme = {
+  #     name = "Numix-Cursor";
+  #     package = pkgs.numix-cursor-theme;
+  #   };
 
-    gtk3.extraConfig = {
-      Settings = ''
-        gtk-application-prefer-dark-theme=0
-      '';
-    };
+  #   gtk3.extraConfig = {
+  #     Settings = ''
+  #       gtk-application-prefer-dark-theme=0
+  #     '';
+  #   };
 
-    gtk4.extraConfig = {
-      Settings = ''
-        gtk-application-prefer-dark-theme=0
-      '';
-    };
-  };
+  #   gtk4.extraConfig = {
+  #     Settings = ''
+  #       gtk-application-prefer-dark-theme=0
+  #     '';
+  #   };
+  # };
 
   dconf.settings = {
    "org/gnome/desktop/interface" = {
@@ -53,11 +53,16 @@
         "appindicatorsupport@rgcjonas.gmail.com"
         "auto-move-windows@gnome-shell-extensions.gcampax.github.com"
         "workspace-indicator@gnome-shell-extensions.gcampax.github.com"
+        "caffeine@patapon.info"
+        # "espresso@coadmunkee.github.com"
+        "peek-top-bar-on-fullscreen@marcinjahn.com"
+        # "user-theme@gnome-shell-extensions.gcampax.github.com"
+        #"blur-my-shell@aunetx"
       ];
     };
-    "org/gnome/shell/extensions/user-theme" = {
-      name = "palenight";
-    };
+    # "org/gnome/shell/extensions/user-theme" = {
+    #   name = "palenight";
+    # };
     "org/gnome/shell/extensions/vitals" = {
       hide-zeros = true;
       network-speed-format = 1; # bits/second
@@ -90,5 +95,11 @@
     gnomeExtensions.applications-menu
     gnomeExtensions.auto-move-windows
     gnomeExtensions.user-themes
+    gnomeExtensions.espresso
+    gnomeExtensions.caffeine
+    gnomeExtensions.blur-my-shell
+    gnomeExtensions.peek-top-bar-on-fullscreen
+    gnomeExtensions.top-bar-organizer
+    gnomeExtensions.screenshot-tool
   ];
 }
