@@ -32,8 +32,8 @@
   #     '';
   #   };
   # };
-  stylix.image = ../../wallpapers/city_skyline_twilight_pixel.jpg;
-  
+  stylix.image = ./wallpapers/city_skyline_twilight_pixel.jpg;
+
 
   dconf.settings = {
    "org/gnome/desktop/interface" = {
