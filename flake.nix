@@ -1,6 +1,6 @@
 {
   description = "System Flake";
-  outputs = { self, nixpkgs, home-manager, plasma-manager, ... }@inputs: 
+  outputs = { self, nixpkgs, home-manager, plasma-manager, stylix, ... }@inputs: 
   let 
     user = {
       name = "anoop";
@@ -21,6 +21,7 @@
         ./machines/${hostname}/hardware-configuration.nix
         ./nixos/configuration.nix { _module.args = { inherit hostname baseVersion dekstopEnv; };}
         ./nixos/users.nix { _module.args = { inherit user; };}
+        stylix.nixosModules.stylix
 
   	    # make home-manager as a module of nixos
         # so that home-manager configuration will be deployed automatically when executing `nixos-rebuild switch`
@@ -70,6 +71,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.home-manager.follows = "home-manager";
     };
+    stylix.url = "github:danth/stylix";
   };
 
 }
