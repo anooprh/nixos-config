@@ -17,7 +17,7 @@
     gnome.dconf-editor
     gnome.gpaste
     gnome-menus
-    gnome.gpaste
+    # gnome.gpaste
   ];
 
   services.dbus.packages = with pkgs; [ 
@@ -30,7 +30,7 @@
   # Automatic screen rotation
   hardware.sensor.iio.enable = true;
 
-  stylix.image = ../../wallpapers/city_skyline_twilight_pixel.jpg;
+  stylix.image = ../../wallpapers/milk-bear-mocha.jpg;
   stylix.base16Scheme = {
     base00 = "282828";
     base01 = "3c3836";
@@ -53,6 +53,7 @@
   # Adwait is installed by default
   # stylix.cursor.package = pkgs.apple-cursor; 
   stylix.cursor.name = "Adwaita";
+  stylix.cursor.size = 24;
  
   stylix.fonts = {
     monospace = {
@@ -70,10 +71,9 @@
   };
   stylix.polarity = "either"; # "light" or "either"
   stylix.fonts.sizes = {
-    applications = 10;
-    terminal = 10;
-    desktop = 10;
-    popups = 10;
+    applications = 9;
+    terminal = 9;
+    desktop = 9;
+    popups = 9;
   };
-  stylix.targets.gnome.enable = true;
 }

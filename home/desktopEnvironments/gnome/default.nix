@@ -37,10 +37,10 @@
       network-speed-format = 1; # bits/second
     };
     "org/gnome/shell/extensions/unite" = {
-      show-window-title = "always";
+      show-window-title = "never";
       hide-activities-button = "never";
       use-activities-text = false;
-      window-buttons-placement = "left";
+      window-buttons-placement = "last";
     };
     "org/gtk/settings/file-chooser" = {
       clock-format = "12h";
@@ -49,8 +49,8 @@
       tap-to-click = true;
     };
     "org/gnome/settings-daemon/plugins/color" = {
-      night-light-enabled = true;
-      night-light-schedule-automatic = true;
+      night-light-enabled = false;
+      night-light-schedule-automatic = false;
     };
     "org/gnome/mutter" = {
       edge-tiling = true;
@@ -63,10 +63,13 @@
     "org/gnome/desktop/wm/preferences" = {
       button-layout = ":minimize,maximize,close";
     };
+    "org/gnome/settings-daemon/plugins/power" = {
+      sleep-inactive-ac-type = "nothing";
+    };
   };
 
   home.packages = with pkgs; [
-    palenight-theme
+    dconf2nix
     gnomeExtensions.vitals
     gnomeExtensions.bluetooth-battery-meter
     gnomeExtensions.app-menu-is-back
@@ -78,4 +81,7 @@
     gnomeExtensions.screenshot-tool
     gnomeExtensions.unite
   ];
+
+  stylix.targets.vscode.enable = false;
+
 }
