@@ -17,7 +17,7 @@
     gnome.dconf-editor
     gnome.gpaste
     gnome-menus
-    gnome.gpaste
+    # gnome.gpaste
   ];
 
   services.dbus.packages = with pkgs; [ 
@@ -31,28 +31,29 @@
   hardware.sensor.iio.enable = true;
 
   stylix.image = ../../wallpapers/milk-bear-mocha.jpg;
-  #stylix.base16Scheme = {
-  #  base00 = "282828";
-  #  base01 = "3c3836";
-  #  base02 = "504945";
-  #  base03 = "665c54";
-  #  base04 = "bdae93";
-  #  base05 = "d5c4a1";
-  #  base06 = "ebdbb2";
-  #  base07 = "fbf1c7";
-  #  base08 = "fb4934";
-  #  base09 = "fe8019";
-  #  base0A = "fabd2f";
-  #  base0B = "b8bb26";
-  #  base0C = "8ec07c";
-  #  base0D = "83a598";
-  #  base0E = "d3869b";
-  #  base0F = "d65d0e";
-  #};
+  stylix.base16Scheme = {
+    base00 = "282828";
+    base01 = "3c3836";
+    base02 = "504945";
+    base03 = "665c54";
+    base04 = "bdae93";
+    base05 = "d5c4a1";
+    base06 = "ebdbb2";
+    base07 = "fbf1c7";
+    base08 = "fb4934";
+    base09 = "fe8019";
+    base0A = "fabd2f";
+    base0B = "b8bb26";
+    base0C = "8ec07c";
+    base0D = "83a598";
+    base0E = "d3869b";
+    base0F = "d65d0e";
+  };
 
   # Adwait is installed by default
   # stylix.cursor.package = pkgs.apple-cursor; 
   stylix.cursor.name = "Adwaita";
+  stylix.cursor.size = 24;
  
   stylix.fonts = {
     monospace = {
@@ -70,9 +71,9 @@
   };
   stylix.polarity = "either"; # "light" or "either"
   stylix.fonts.sizes = {
-    applications = 10;
-    terminal = 10;
-    desktop = 10;
-    popups = 10;
+    applications = 9;
+    terminal = 9;
+    desktop = 9;
+    popups = 9;
   };
 }

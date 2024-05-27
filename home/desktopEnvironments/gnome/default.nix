@@ -49,8 +49,8 @@
       tap-to-click = true;
     };
     "org/gnome/settings-daemon/plugins/color" = {
-      night-light-enabled = true;
-      night-light-schedule-automatic = true;
+      night-light-enabled = false;
+      night-light-schedule-automatic = false;
     };
     "org/gnome/mutter" = {
       edge-tiling = true;
@@ -63,10 +63,13 @@
     "org/gnome/desktop/wm/preferences" = {
       button-layout = ":minimize,maximize,close";
     };
+    "org/gnome/settings-daemon/plugins/power" = {
+      sleep-inactive-ac-type = "nothing";
+    };
   };
 
   home.packages = with pkgs; [
-    palenight-theme
+    dconf2nix
     gnomeExtensions.vitals
     gnomeExtensions.bluetooth-battery-meter
     gnomeExtensions.app-menu-is-back
@@ -79,7 +82,6 @@
     gnomeExtensions.unite
   ];
 
-  # stylix.targets.gnome.enable = false;
   stylix.targets.vscode.enable = false;
 
 }
