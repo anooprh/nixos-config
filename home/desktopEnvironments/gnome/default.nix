@@ -37,10 +37,10 @@
       network-speed-format = 1; # bits/second
     };
     "org/gnome/shell/extensions/unite" = {
-      show-window-title = "always";
+      show-window-title = "never";
       hide-activities-button = "never";
       use-activities-text = false;
-      window-buttons-placement = "left";
+      window-buttons-placement = "last";
     };
     "org/gtk/settings/file-chooser" = {
       clock-format = "12h";
@@ -78,4 +78,6 @@
     gnomeExtensions.screenshot-tool
     gnomeExtensions.unite
   ];
+
+  # stylix.targets.gnome.enable = false;
 }

@@ -30,7 +30,7 @@
   # Automatic screen rotation
   hardware.sensor.iio.enable = true;
 
-  stylix.image = ../../wallpapers/city_skyline_twilight_pixel.jpg;
+  stylix.image = ../../wallpapers/milk-bear-mocha.jpg;
   stylix.base16Scheme = {
     base00 = "282828";
     base01 = "3c3836";
