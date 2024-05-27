@@ -80,4 +80,6 @@
   ];
 
   # stylix.targets.gnome.enable = false;
+  stylix.targets.vscode.enable = false;
+
 }
