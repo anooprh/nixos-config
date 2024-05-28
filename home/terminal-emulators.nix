@@ -1,6 +1,8 @@
 { inputs, config, pkgs, lib, ... }:
 
 {
+  programs.terminator.enable = true;
+  
   programs.wezterm = {
     enable = true;
     extraConfig = ''
