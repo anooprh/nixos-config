@@ -45,6 +45,7 @@
               ./home/documentutils.nix
               ./home/devtools.nix
               ./home/utils.nix
+              ./home/docker.nix
             ];
           };
         }

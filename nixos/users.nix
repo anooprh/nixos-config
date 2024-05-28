@@ -16,7 +16,7 @@
   users.users.${user.name} = {
     isNormalUser = true;
     description = "${user.description}";
-    extraGroups = [ "networkmanager" "wheel" "audio" "vboxusers" ];
+    extraGroups = [ "networkmanager" "wheel" "audio" "vboxusers" "docker" ];
     shell = pkgs.zsh;
   };
 
