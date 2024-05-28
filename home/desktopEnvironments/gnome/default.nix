@@ -16,7 +16,7 @@
       enabled-extensions = [
         "Vitals@CoreCoding.com"
         "Bluetooth-Battery-Meter@maniacx.github.com"
-        # "appmenu-is-back@fthx"
+        "appmenu-is-back@fthx"
         "appindicatorsupport@rgcjonas.gmail.com"
         "apps-menu@gnome-shell-extensions.gcampax.github.com"
         "auto-move-windows@gnome-shell-extensions.gcampax.github.com"
@@ -25,7 +25,7 @@
         # "espresso@coadmunkee.github.com"
         "peek-top-bar-on-fullscreen@marcinjahn.com"
         # "user-theme@gnome-shell-extensions.gcampax.github.com"
-        #"blur-my-shell@aunetx"
+        # "blur-my-shell@aunetx"
         "unite@hardpixel.eu"
       ];
     };
@@ -38,6 +38,7 @@
     };
     "org/gnome/shell/extensions/unite" = {
       show-window-title = "never";
+      show-appmenu-button = false;
       hide-activities-button = "never";
       use-activities-text = false;
       window-buttons-placement = "last";
