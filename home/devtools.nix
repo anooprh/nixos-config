@@ -43,12 +43,13 @@
       johnpapa.vscode-peacock
       aaron-bond.better-comments
       donjayamanne.githistory
-      PKief.material-icon-theme
+      pkief.material-icon-theme
     ];
     mutableExtensionsDir = true;
     userSettings = {
       "files.autoSave" = "onFocusChange";
       "[nix]"."editor.tabSize" = 2;
+      "workbench.iconTheme"= "material-icon-theme";
     };
   };
 }
