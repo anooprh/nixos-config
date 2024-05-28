@@ -1,6 +1,13 @@
 { inputs, config, pkgs, lib, ... }:
 
 {
+  home.file = {
+    "Workspace/.keep".source = builtins.toFile "keep" ""; 
+  };
+  home.file = {
+    "Tool/.keep".source = builtins.toFile "keep" ""; 
+  };
+
   home.packages = with pkgs; [
     jetbrains.webstorm
     jetbrains.pycharm-community
@@ -36,11 +43,11 @@
       johnpapa.vscode-peacock
       aaron-bond.better-comments
       donjayamanne.githistory
-      file-icons.file-icons
+      PKief.material-icon-theme
     ];
     mutableExtensionsDir = true;
     userSettings = {
-      "files.autoSave" = "on";
+      "files.autoSave" = "onFocusChange";
       "[nix]"."editor.tabSize" = 2;
     };
   };
