@@ -1,6 +1,7 @@
 { inputs, config, pkgs, lib, ... }:
 
 {
+  # "Application Title Bar" widget has to be installed manually . This is not yet available in nixpkgs.
   home.packages = with pkgs; [
 #    latte-dock
 #    libsForQt5.applet-window-buttons
@@ -51,6 +52,16 @@
           };
         }
         "org.kde.plasma.marginsseparator"
+        { 
+          name = "com.github.antroids.application-title-bar";
+          config = {
+              Appearance.widgetButtonsIconsTheme = "Aurorae";
+              Appearance.windowTitleFontSizeMode = "Fit";
+              Appearance.windowTitleMarginsLeft = 20;
+              Appearance.windowTitleMarginsRight = 20;
+              Appearance.windowTitleSource = "AppName";
+          };
+        }
         "org.kde.plasma.appmenu"
 
         "org.kde.plasma.panelspacer"
