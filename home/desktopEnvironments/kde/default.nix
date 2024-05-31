@@ -1,75 +1,81 @@
 { inputs, config, pkgs, lib, ... }:
 
 {
+  home.packages = with pkgs; [
+#    latte-dock
+#    libsForQt5.applet-window-buttons
+#    libsForQt5.applet-window-appmenu
+  ];
 
+  programs.plasma = {
+    enable = true;
+    overrideConfig = true;
+    workspace = {
+        clickItemTo = "select";
+        lookAndFeel = "org.kde.breeze.desktop";
+        cursorTheme = "Breeze";
+        iconTheme = "Breeze";
+        #wallpaper = "${pkgs.libsForQt5.plasma-workspace-wallpapers}/share/wallpapers/Patak/contents/images/1080x1920.png";
+        wallpaper = ../../../wallpapers/milk-bear-mocha.jpg;
+    };
 
-#  programs.plasma = {
-#    enable = true;
-# #   workspace = {
-# #    clickItemTo = "select";
-# #    lookAndFeel = "org.kde.breezedark.desktop";
-# #    cursorTheme = "Breeze_Snow";
-# #    iconTheme = "Papirus";
-# #    wallpaper = "${pkgs.libsForQt5.plasma-workspace-wallpapers}/share/wallpapers/Patak/contents/images/1080x1920.png";
-# #  };
-
-#   panels = [
-#     # Windows-like panel at the bottom
-#     {
-#       location = "bottom";
-#       widgets = [
-#         # We can configure the widgets by adding the name and config
-#         # attributes. For example to add the the kickoff widget and set the
-#         # icon to "nix-snowflake-white" use the below configuration. This will
-#         # add the "icon" key to the "General" group for the widget in
-#         # ~/.config/plasma-org.kde.plasma.desktop-appletsrc.
-#         {
-#           name = "org.kde.plasma.kickoff";
-#           config = {
-#             General.icon = "nix-snowflake-white";
-#           };
-#         }
-#         # Adding configuration to the widgets can also for example be used to
-#         # pin apps to the task-manager, which this example illustrates by
-#         # pinning dolphin and konsole to the task-manager by default.
-#         {
-#           name = "org.kde.plasma.icontasks";
-#           config = {
-#             General.launchers = [
-#               "applications:org.kde.dolphin.desktop"
-#               "applications:org.kde.konsole.desktop"
-#             ];
-#           };
-#         }
-#         # If no configuration is needed, specifying only the name of the
-#         # widget will add them with the default configuration.
-#         "org.kde.plasma.marginsseparator"
-#         "org.kde.plasma.systemtray"
-#         # If you need configuration for your widget, instead of specifying the
-#         # the keys and values directly using the config attribute as shown
-#         # above, plasma-manager also provides some higher-level interfaces for
-#         # configuring the widgets. See modules/widgets for supported widgets
-#         # and options for these widgets. The widget below shows an example of
-#         # usage, where we add a digital clock, setting 12h time and first day
-#         # of the week to sunday.
-#         {
-#           digitalClock = {
-#             calendar.firstDayOfWeek = "monday";
-#             time.format = "12h";
-#           };
-#         }
-#       ];
-#       hiding = "autohide";
-#     }
-    
-#     # Global menu at the top
-#     {
-#       location = "top";
-#       height = 26;
-#       widgets = [
-#         "org.kde.plasma.appmenu"
-#       ];
-#     }
-#   ];
-#  };
+   panels = [
+     # Windows-like panel at the bottom
+     {
+        location = "bottom";
+        lengthMode = "fit";
+        height = 64;
+        widgets = [
+          {
+            name = "org.kde.plasma.icontasks";
+            config = {
+              General.launchers = [
+                "applications:org.kde.dolphin.desktop"
+                "applications:org.kde.konsole.desktop"
+              ];
+            };
+          }
+        ];
+        hiding = "autohide";
+     }
+   
+     # Global menu at the top
+     {
+      location = "top";
+      height = 26;
+      widgets = [
+        {
+          name = "org.kde.plasma.kickoff";
+          config = {
+            General.icon = "nix-snowflake";
+          };
+        }
+        "org.kde.plasma.marginsseparator"
+        "org.kde.plasma.appmenu"
+        {
+          name = "org.kde.plasma.weather";
+          config = {
+            WeatherStation.source = "bbcukmet|weather|Hyderabad, India, IN|1269843";
+            Appearance.showTemperatureInCompactMode = "true";
+          };
+        }
+        "org.kde.plasma.panelspacer"
+        "org.kde.plasma.marginsseparator"
+        "org.kde.plasma.systemtray"
+        {
+          digitalClock = {
+            calendar.firstDayOfWeek = "monday";
+            time.format = "12h";
+            time.showSeconds = "always";
+            date.position = "besideTime";
+            date.format = {
+              "custom" = "dddd dd MMMM yyyy";
+            };
+          };
+        }
+        "org.kde.plasma.showdesktop"
+      ];
+     }
+   ];
+  };
 }

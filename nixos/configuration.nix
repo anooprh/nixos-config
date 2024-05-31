@@ -7,8 +7,8 @@
 {
   imports = [
     # Desktop Environments; Choose One among the list below
-    ./desktopEnvironments/gnome.nix
-    # ./desktopEnvironments/kde.nix
+    # ./desktopEnvironments/gnome.nix
+    ./desktopEnvironments/kde.nix
     # ./desktopEnvironments/xfce.nix
   ];
 
