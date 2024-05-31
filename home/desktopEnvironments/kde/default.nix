@@ -52,6 +52,9 @@
         }
         "org.kde.plasma.marginsseparator"
         "org.kde.plasma.appmenu"
+
+        "org.kde.plasma.panelspacer"
+
         {
           name = "org.kde.plasma.weather";
           config = {
@@ -59,9 +62,10 @@
             Appearance.showTemperatureInCompactMode = "true";
           };
         }
-        "org.kde.plasma.panelspacer"
         "org.kde.plasma.marginsseparator"
-        "org.kde.plasma.systemtray"
+        {
+          name = "org.kde.plasma.systemtray";  
+        }
         {
           digitalClock = {
             calendar.firstDayOfWeek = "monday";
