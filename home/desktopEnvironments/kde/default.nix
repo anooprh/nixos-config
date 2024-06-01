@@ -9,8 +9,12 @@
   ];
 
   home.file = {
-    "${config.xdg.dataHome}/share/plasma/plasmoids" = {
+    "${config.xdg.dataHome}/plasma/plasmoids" = {
       source = ./plasmoids;
+      recursive = true;
+    };
+    "${config.xdg.dataHome}/kwin/scripts" = {
+      source = ./kwin_scripts;
       recursive = true;
     };
   };
@@ -21,7 +25,7 @@
     workspace = {
         clickItemTo = "select";
         lookAndFeel = "org.kde.breeze.desktop";
-        cursorTheme = "Breeze";
+        cursorTheme = "breeze";
         iconTheme = "breeze";
         # wallpaper = "${pkgs.libsForQt5.plasma-workspace-wallpapers}/share/wallpapers/Patak/contents/images/1080x1920.png";
         wallpaper = ../../../wallpapers/milk-bear-mocha.jpg;
