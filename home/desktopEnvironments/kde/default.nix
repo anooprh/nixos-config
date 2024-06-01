@@ -10,11 +10,11 @@
 
   home.file = {
     "${config.xdg.dataHome}/plasma/plasmoids" = {
-      source = ./plasmoids;
+      source = ./plasma/plasmoids;
       recursive = true;
     };
     "${config.xdg.dataHome}/kwin/scripts" = {
-      source = ./kwin_scripts;
+      source = ./kwin/scripts;
       recursive = true;
     };
   };
