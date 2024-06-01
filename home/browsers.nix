@@ -16,6 +16,10 @@
         # Bitwarden
         id = "nngceckbapebfimnlniiiahkandclblb";
       }
+      # {
+      #   # Ublock origin
+      #   id = "cjpalhdlnbpafiamejdnhcphjbkeiagm'
+      # }
     ];
   };
 

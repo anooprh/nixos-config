@@ -1,12 +1,19 @@
 { inputs, config, pkgs, lib, ... }:
 
 {
-  # "Application Title Bar" widget has to be installed manually . This is not yet available in nixpkgs.
+  
   home.packages = with pkgs; [
 #    latte-dock
 #    libsForQt5.applet-window-buttons
 #    libsForQt5.applet-window-appmenu
   ];
+
+  home.file = {
+    "${config.xdg.dataHome}/share/plasma/plasmoids" = {
+      source = ./plasmoids;
+      recursive = true;
+    };
+  };
 
   programs.plasma = {
     enable = true;
@@ -15,30 +22,30 @@
         clickItemTo = "select";
         lookAndFeel = "org.kde.breeze.desktop";
         cursorTheme = "Breeze";
-        iconTheme = "Breeze";
-        #wallpaper = "${pkgs.libsForQt5.plasma-workspace-wallpapers}/share/wallpapers/Patak/contents/images/1080x1920.png";
+        iconTheme = "breeze";
+        # wallpaper = "${pkgs.libsForQt5.plasma-workspace-wallpapers}/share/wallpapers/Patak/contents/images/1080x1920.png";
         wallpaper = ../../../wallpapers/milk-bear-mocha.jpg;
     };
 
    panels = [
      # Windows-like panel at the bottom
-     {
-        location = "bottom";
-        lengthMode = "fit";
-        height = 64;
-        widgets = [
-          {
-            name = "org.kde.plasma.icontasks";
-            config = {
-              General.launchers = [
-                "applications:org.kde.dolphin.desktop"
-                "applications:org.kde.konsole.desktop"
-              ];
-            };
-          }
-        ];
-        hiding = "autohide";
-     }
+     # {
+     #    location = "bottom";
+     #    lengthMode = "fit";
+     #    height = 64;
+     #    widgets = [
+     #      {
+     #        name = "org.kde.plasma.icontasks";
+     #        config = {
+     #          General.launchers = [
+     #            "applications:org.kde.dolphin.desktop"
+     #            "applications:org.kde.konsole.desktop"
+     #          ];
+     #        };
+     #      }
+     #    ];
+     #    hiding = "autohide";
+     # }
    
      # Global menu at the top
      {
@@ -57,9 +64,10 @@
           config = {
               Appearance.widgetButtonsIconsTheme = "Aurorae";
               Appearance.windowTitleFontSizeMode = "Fit";
-              Appearance.windowTitleMarginsLeft = 20;
-              Appearance.windowTitleMarginsRight = 20;
+              Appearance.windowTitleMarginsLeft = "20";
+              Appearance.windowTitleMarginsRight = "20";
               Appearance.windowTitleSource = "AppName";
+              Appearance.windowTitleUndefined = "";
           };
         }
         "org.kde.plasma.appmenu"
