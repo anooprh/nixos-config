@@ -4,6 +4,7 @@
 
   dconf.settings = {
    "org/gnome/desktop/interface" = {
+      icon-theme = 'Adwaita';
       enable-hot-corners = false;
       clock-format = "12h";
       clock-show-weekday = true;
@@ -43,6 +44,10 @@
       use-activities-text = false;
       window-buttons-placement = "last";
     };
+    "org/gnome/shell/extensions/Bluetooth-Battery-Mete" = {
+      enable-battery-level-text = true;
+      Swap-icon-text = true;
+    };
     "org/gtk/settings/file-chooser" = {
       clock-format = "12h";
     };
@@ -55,7 +60,7 @@
     };
     "org/gnome/mutter" = {
       edge-tiling = true;
-      dynamic-workspaces = false;
+      dynamic-workspaces = true;
       workspaces-only-on-primary = true;
     };
     "org/gnome/shell/app-switcher" = {
