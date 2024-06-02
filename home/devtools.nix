@@ -36,7 +36,7 @@
     enable = true;
     enableUpdateCheck = false;
     extensions = with pkgs.vscode-extensions; [
-      bbenoist.nix
+      jnoortheen.nix-ide
       eamodio.gitlens
       ms-azuretools.vscode-docker
       humao.rest-client

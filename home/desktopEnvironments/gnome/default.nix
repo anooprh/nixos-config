@@ -4,7 +4,7 @@
 
   dconf.settings = {
    "org/gnome/desktop/interface" = {
-      icon-theme = 'Adwaita';
+      icon-theme = "Adwaita";
       enable-hot-corners = false;
       clock-format = "12h";
       clock-show-weekday = true;
@@ -15,24 +15,31 @@
       disable-user-extensions = false;
       # `gnome-extensions list` for a list
       enabled-extensions = [
-        "Vitals@CoreCoding.com"
+        # "Vitals@CoreCoding.com"
         "Bluetooth-Battery-Meter@maniacx.github.com"
         "appmenu-is-back@fthx"
         "appindicatorsupport@rgcjonas.gmail.com"
         "apps-menu@gnome-shell-extensions.gcampax.github.com"
         "auto-move-windows@gnome-shell-extensions.gcampax.github.com"
-        "workspace-indicator@gnome-shell-extensions.gcampax.github.com"
+        # "workspace-indicator@gnome-shell-extensions.gcampax.github.com"
         "caffeine@patapon.info"
         # "espresso@coadmunkee.github.com"
         "peek-top-bar-on-fullscreen@marcinjahn.com"
         # "user-theme@gnome-shell-extensions.gcampax.github.com"
         # "blur-my-shell@aunetx"
         "unite@hardpixel.eu"
+        "dock-from-dash@fthx"
+        "just-perfection-desktop@just-perfection"
+        "system-monitor@gnome-shell-extensions.gcampax.github.com"
+        # "date-menu-formatter@marcinjakubowski.github.com"
       ];
     };
     # "org/gnome/shell/extensions/user-theme" = {
     #   name = "palenight";
     # };
+    "org/gnome/shell/extensions/just-perfection" = {
+      panel-in-overview = true;
+    };
     "org/gnome/shell/extensions/vitals" = {
       hide-zeros = true;
       network-speed-format = 1; # bits/second
@@ -86,6 +93,9 @@
     gnomeExtensions.top-bar-organizer
     gnomeExtensions.screenshot-tool
     gnomeExtensions.unite
+    gnomeExtensions.date-menu-formatter
+    gnomeExtensions.just-perfection
+    gnomeExtensions.dock-from-dash
   ];
 
   stylix.targets.vscode.enable = false;
