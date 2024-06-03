@@ -15,7 +15,6 @@
     gnome.gnome-settings-daemon
     gnome.gnome-tweaks
     gnome.dconf-editor
-    gnome.gpaste
     gnome-menus
     # gnome.gpaste
   ];

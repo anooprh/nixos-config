@@ -3,6 +3,21 @@
 {
 
   dconf.settings = {
+    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
+      binding = "<Super>space";
+      command = "rofi -show drun";
+      name = "Rofi App Launcher";
+    };
+    "org/gnome/settings-daemon/plugins/media-keys" = {
+      custom-keybindings = [
+        "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/"
+      ];
+    };  
+    "org/gnome/desktop/wm/keybindings" = {
+      switch-input-source = [];
+      switch-input-source-backward = [];
+    };
+
     # Set Num Lock On by default
     "org/gnome/desktop/peripherals/keyboard" = {
       numlock-state = true;
@@ -72,6 +87,7 @@
     };
     "org/gnome/shell/extensions/unite" = {
       show-window-title = "never";
+      show-window-buttons = "always";
       show-appmenu-button = false;
       hide-activities-button = "never";
       use-activities-text = false;
