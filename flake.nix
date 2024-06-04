@@ -46,7 +46,6 @@
               ./home/devtools.nix
               ./home/utils.nix
               ./home/docker.nix
-              # ./home/rofi.nix
             ];
           };
         }

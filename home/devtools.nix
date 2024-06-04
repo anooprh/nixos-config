@@ -5,7 +5,7 @@
     "Workspace/.keep".source = builtins.toFile "keep" ""; 
   };
   home.file = {
-    "Tool/.keep".source = builtins.toFile "keep" ""; 
+    "Tools/.keep".source = builtins.toFile "keep" ""; 
   };
 
   home.packages = with pkgs; [
@@ -50,6 +50,9 @@
       "files.autoSave" = "onFocusChange";
       "[nix]"."editor.tabSize" = 2;
       "workbench.iconTheme"= "material-icon-theme";
+      "terminal.integrated.cursorBlinking" = true;
+      "terminal.integrated.cursorStyle" = "line";
+      "terminal.integrated.smoothScrolling" = true;
     };
   };
 }
