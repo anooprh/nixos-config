@@ -44,6 +44,7 @@
               ./home/multimedia.nix
               ./home/documentutils.nix
               ./home/devtools.nix
+              ./home/vscode.nix
               ./home/utils.nix
               ./home/docker.nix
             ];
