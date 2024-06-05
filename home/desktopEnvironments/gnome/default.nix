@@ -59,32 +59,32 @@
       # `gnome-extensions list` for a list
       enabled-extensions = [
         # "Vitals@CoreCoding.com"
-        "Bluetooth-Battery-Meter@maniacx.github.com"
-        "appmenu-is-back@fthx"
+        # "Bluetooth-Battery-Meter@maniacx.github.com"
+        "app-menu-is-back@fthx"
         "appindicatorsupport@rgcjonas.gmail.com"
-        "apps-menu@gnome-shell-extensions.gcampax.github.com"
-        "auto-move-windows@gnome-shell-extensions.gcampax.github.com"
+        # "apps-menu@gnome-shell-extensions.gcampax.github.com"
+        # "auto-move-windows@gnome-shell-extensions.gcampax.github.com"
         # "workspace-indicator@gnome-shell-extensions.gcampax.github.com"
         "caffeine@patapon.info"
-        "peek-top-bar-on-fullscreen@marcinjahn.com"
+        # "peek-top-bar-on-fullscreen@marcinjahn.com"
         "unite@hardpixel.eu"
         "dock-from-dash@fthx"
-        "just-perfection-desktop@just-perfection"
-        "system-monitor@gnome-shell-extensions.gcampax.github.com"
-        "clipboard-indicator@tudmotu.com"
+        # "just-perfection-desktop@just-perfection"
+        # "system-monitor@gnome-shell-extensions.gcampax.github.com"
+        # "clipboard-indicator@tudmotu.com"
         "compiz-alike-magic-lamp-effect@hermes83.github.com"
       ];
     };
     # "org/gnome/shell/extensions/user-theme" = {
     #   name = "palenight";
     # };
-    "org/gnome/shell/extensions/just-perfection" = {
-      panel-in-overview = true;
-    };
-    "org/gnome/shell/extensions/vitals" = {
-      hide-zeros = true;
-      network-speed-format = 1; # bits/second
-    };
+    # "org/gnome/shell/extensions/just-perfection" = {
+    #   panel-in-overview = true;
+    # };
+    # "org/gnome/shell/extensions/vitals" = {
+    #   hide-zeros = true;
+    #   network-speed-format = 1; # bits/second
+    # };
     "org/gnome/shell/extensions/unite" = {
       show-window-title = "never";
       show-window-buttons = "always";
@@ -93,26 +93,27 @@
       use-activities-text = false;
       window-buttons-placement = "last";
     };
-    "org/gnome/shell/extensions/Bluetooth-Battery-Mete" = {
-      enable-battery-level-text = true;
-      Swap-icon-text = true;
-    };
+    # "org/gnome/shell/extensions/Bluetooth-Battery-Mete" = {
+    #   enable-battery-level-text = true;
+    #   Swap-icon-text = true;
+    # };
   };
 
   home.packages = with pkgs; [
     dconf2nix
-    gnomeExtensions.bluetooth-battery-meter
+    # gnomeExtensions.bluetooth-battery-meter
     gnomeExtensions.app-menu-is-back
-    gnomeExtensions.auto-move-windows
+    gnomeExtensions.appindicator
+    # gnomeExtensions.auto-move-windows
     gnomeExtensions.caffeine
-    gnomeExtensions.peek-top-bar-on-fullscreen
-    gnomeExtensions.top-bar-organizer
-    gnomeExtensions.screenshot-tool
+    # gnomeExtensions.peek-top-bar-on-fullscreen
+    # gnomeExtensions.top-bar-organizer
+    # gnomeExtensions.screenshot-tool
     gnomeExtensions.unite
-    gnomeExtensions.date-menu-formatter
-    gnomeExtensions.just-perfection
+    # gnomeExtensions.date-menu-formatter
+    # gnomeExtensions.just-perfection
     gnomeExtensions.dock-from-dash
-    gnomeExtensions.clipboard-indicator
+    # gnomeExtensions.clipboard-indicator
     gnomeExtensions.compiz-alike-magic-lamp-effect
   ];
 

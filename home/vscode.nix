@@ -38,10 +38,10 @@
       "terminal.integrated.cursorStyle" = "line";
       "terminal.integrated.smoothScrolling" = true;
     };
-    keybindings = [
-      {
+    # keybindings = [
+    #   {
 
-      }
-    ];
+    #   }
+    # ];
   };
 }

@@ -6,5 +6,8 @@
     enable = true;
     userName = "${user.description}";
     userEmail = "${user.email}";
+    ignores = [
+      ".devenv"
+    ];
   };
 }
