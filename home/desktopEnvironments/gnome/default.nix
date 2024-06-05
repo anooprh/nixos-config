@@ -60,7 +60,7 @@
       enabled-extensions = [
         # "Vitals@CoreCoding.com"
         # "Bluetooth-Battery-Meter@maniacx.github.com"
-        "app-menu-is-back@fthx"
+        "appmenu-is-back@fthx"
         "appindicatorsupport@rgcjonas.gmail.com"
         # "apps-menu@gnome-shell-extensions.gcampax.github.com"
         # "auto-move-windows@gnome-shell-extensions.gcampax.github.com"
