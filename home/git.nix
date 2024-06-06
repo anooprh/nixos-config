@@ -8,6 +8,8 @@
     userEmail = "${user.email}";
     ignores = [
       ".devenv"
+      ".direnv"
+      ".vscode/settings.json"
     ];
   };
 }

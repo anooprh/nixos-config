@@ -37,6 +37,11 @@
       "terminal.integrated.cursorBlinking" = true;
       "terminal.integrated.cursorStyle" = "line";
       "terminal.integrated.smoothScrolling" = true;
+
+      "peacock.affectPanelBorder" = true;
+      "peacock.affectSideBarBorder" = true;
+      "peacock.affectTabActiveBorder" = true;
+      "peacock.surpriseMeOnStartup" = true;
     };
     # keybindings = [
     #   {
