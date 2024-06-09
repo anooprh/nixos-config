@@ -40,7 +40,7 @@
               ./home/git.nix
               ./home/multimedia.nix
               ./home/shells.nix
-              ./home/terminal-emulators.nix
+              ./home/terminator.nix
               ./home/utils.nix
               ./home/vscode.nix
             ];

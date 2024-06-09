@@ -18,10 +18,14 @@
     };
   };
 
-  # Radio Player
+  
   home.packages = with pkgs; [
+    # Radio Player
     tuner
     rhythmbox
+
+    # VLC Media Player
+    vlc
   ];
 
 }
