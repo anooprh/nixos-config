@@ -8,7 +8,7 @@
       email = "anoophallur@gmail.com";
     };
     hostname = "hpspectre";
-    dekstopEnv = "gnome" ;# Set to one of "gnome", "xfce", "kde"
+    dekstopEnv = "kde" ;# Set to one of "gnome", "xfce", "kde"
     system = "x86_64-linux";
     baseVersion = "23.11";
   in
@@ -21,7 +21,7 @@
         ./machines/${hostname}/hardware-configuration.nix
         ./nixos/configuration.nix { _module.args = { inherit hostname baseVersion dekstopEnv; };}
         ./nixos/users.nix { _module.args = { inherit user; };}
-        stylix.nixosModules.stylix
+        # stylix.nixosModules.stylix
 
   	    # make home-manager as a module of nixos
         # so that home-manager configuration will be deployed automatically when executing `nixos-rebuild switch`

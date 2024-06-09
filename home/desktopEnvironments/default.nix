@@ -4,7 +4,7 @@
   imports = [
     # Enable one
     # ./xfce
-    # ./kde
-    ./gnome
+    ./kde
+    # ./gnome
   ];
 }
