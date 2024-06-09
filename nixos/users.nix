@@ -7,8 +7,6 @@
 {
 
   services = {
-  #   Disable automatic login.
-  #   displayManager.autoLogin.user = "${user.name}";
       displayManager.autoLogin.enable = false;
   };
 

@@ -9,7 +9,9 @@
 
     shellAliases = {
         k = "kubectl"; 
-        p = "cd ~/Workspace"; 
+        p = "cd ~/Workspace";
+        pbcopy = "xsel --clipboard --input";
+        pbpaste = "xsel --clipboard --output";
     };
     history.size = 1000000;
     history.path = "${config.xdg.dataHome}/zsh/history";

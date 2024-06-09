@@ -71,6 +71,9 @@
 
     # Create bootable USB's
     ventoy-full
+
+    # Clipboard Handling
+    xsel
   ];
   
 }
