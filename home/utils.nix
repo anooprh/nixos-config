@@ -68,6 +68,9 @@
     ethtool
     pciutils # lspci
     usbutils # lsusb
+
+    # Create bootable USB's
+    ventoy-full
   ];
   
 }
