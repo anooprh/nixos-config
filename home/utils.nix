@@ -48,6 +48,8 @@
     # it provides the command `nom` works just like `nix`
     # with more details log output
     nix-output-monitor
+    # Formatter for nix files
+    statix
 
     ## productivity
     # hugo # static site generator
