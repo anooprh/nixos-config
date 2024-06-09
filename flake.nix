@@ -26,14 +26,14 @@
         home-manager.nixosModules.home-manager {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
-          home-manager.extraSpecialArgs = { inherit inputs user; };
+          home-manager.extraSpecialArgs = { inherit inputs user system; };
           home-manager.users.${user.name} = {
             home.username = "${user.name}";
             home.homeDirectory = "/home/${user.name}";
             home.stateVersion = "${baseVersion}";
             programs.home-manager.enable = true;
             imports = [
-              ./home/browsers.nix
+              ./home/browsers
               ./home/devtools.nix
               ./home/docker.nix
               ./home/documentutils.nix

@@ -1,4 +1,4 @@
-{ inputs, config, pkgs, lib, ... }:
+{ inputs, config, pkgs, lib, system, user, ... }:
 
 {
   home.packages = with pkgs; [
@@ -8,30 +8,9 @@
     firefox
   ];
 
-  programs.chromium = {
-    enable = true;
-    package = pkgs.brave;
-    extensions = [
-      { 
-        # Bitwarden
-        id = "nngceckbapebfimnlniiiahkandclblb";
-      }
-    ];
-  };
-
   programs.firefox = {
     enable = true;
-    profiles.anoop = {
-
-      bookmarks = [
-        {
-          name = "wikipedia";
-          tags = [ "wiki" ];
-          keyword = "wiki";
-          url = "https://en.wikipedia.org/wiki/Special:Search?search=%s&go=Go";
-        }
-      ];
-
+    profiles.${user.name} = {
       settings = {
         "dom.security.https_only_mode" = true;
         "browser.download.panel.shown" = true;
@@ -43,7 +22,7 @@
         /* some css */                        
       '';                                      
 
-      extensions = with inputs.firefox-addons.packages."x86_64-linux"; [
+      extensions = with inputs.firefox-addons.packages."${system}"; [
         bitwarden
         don-t-fuck-with-paste
       ];
