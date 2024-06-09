@@ -1,6 +1,6 @@
 {
   description = "System Flake";
-  outputs = { self, nixpkgs, home-manager, plasma-manager, stylix, ... }@inputs: 
+  outputs = { self, nixpkgs, home-manager, ... }@inputs: 
   let 
     user = {
       name = "anoop";
@@ -8,7 +8,6 @@
       email = "anoophallur@gmail.com";
     };
     hostname = "hpspectre";
-    dekstopEnv = "kde" ;# Set to one of "gnome", "xfce", "kde"
     system = "x86_64-linux";
     baseVersion = "23.11";
   in
@@ -19,16 +18,14 @@
         # Import the previous configuration.nix we used,
         # so the old configuration file still takes effect
         ./machines/${hostname}/hardware-configuration.nix
-        ./nixos/configuration.nix { _module.args = { inherit hostname baseVersion dekstopEnv; };}
+        ./nixos/configuration.nix { _module.args = { inherit hostname baseVersion; };}
         ./nixos/users.nix { _module.args = { inherit user; };}
-        # stylix.nixosModules.stylix
 
   	    # make home-manager as a module of nixos
         # so that home-manager configuration will be deployed automatically when executing `nixos-rebuild switch`
         home-manager.nixosModules.home-manager {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
-          home-manager.sharedModules = [ plasma-manager.homeManagerModules.plasma-manager ];
           home-manager.extraSpecialArgs = { inherit inputs user; };
           home-manager.users.${user.name} = {
             home.username = "${user.name}";
@@ -36,17 +33,16 @@
             home.stateVersion = "${baseVersion}";
             programs.home-manager.enable = true;
             imports = [
-              ./home/desktopEnvironments
               ./home/browsers.nix
+              ./home/devtools.nix
+              ./home/docker.nix
+              ./home/documentutils.nix
               ./home/git.nix
+              ./home/multimedia.nix
               ./home/shells.nix
               ./home/terminal-emulators.nix
-              ./home/multimedia.nix
-              ./home/documentutils.nix
-              ./home/devtools.nix
-              ./home/vscode.nix
               ./home/utils.nix
-              ./home/docker.nix
+              ./home/vscode.nix
             ];
           };
         }
@@ -68,11 +64,5 @@
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    plasma-manager = {
-      url = "github:pjones/plasma-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.home-manager.follows = "home-manager";
-    };
-    stylix.url = "github:danth/stylix";
   };
 }

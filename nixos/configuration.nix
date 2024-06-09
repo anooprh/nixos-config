@@ -2,14 +2,11 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, hostname, baseVersion, dekstopEnv, ... }:
+{ config, pkgs, hostname, baseVersion, ... }:
 
 {
   imports = [
-    # Desktop Environments; Choose One among the list below
-    # ./desktopEnvironments/gnome.nix
     ./desktopEnvironments/kde.nix
-    # ./desktopEnvironments/xfce.nix
   ];
 
   # Bootloader.
@@ -82,8 +79,7 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
+  # Basic system packages
   environment.systemPackages = with pkgs; [
     vim 
     tmux
