@@ -12,4 +12,12 @@
       ".vscode/settings.json"
     ];
   };
+  programs.gitui.enable = true;
+  programs.gh.enable = true;
+  programs.gh.settings.git_protocol = "ssh";
+
+  home.packages = with pkgs; [
+    gitg
+    gitkraken
+  ];
 }
