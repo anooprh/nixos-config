@@ -33,6 +33,7 @@
             home.stateVersion = "${baseVersion}";
             programs.home-manager.enable = true;
             imports = [
+              ./home/aws.nix
               ./home/browsers
               ./home/devtools.nix
               ./home/docker.nix
