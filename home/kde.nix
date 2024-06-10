@@ -16,8 +16,11 @@
             name = "org.kde.plasma.icontasks";
             config = {
               General.launchers = [
+                "applications:systemsettings.desktop"
                 "applications:org.kde.dolphin.desktop"
-                "applications:org.kde.konsole.desktop"
+                "applications:terminator.desktop"
+                "applications:brave-browser.desktop"
+                "applications:code.desktop"
               ];
             };
           }
