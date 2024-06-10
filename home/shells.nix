@@ -18,7 +18,7 @@
 
     oh-my-zsh = {
       enable = true;
-      plugins = [ "git" "fzf" "git-prompt" "zsh-interactive-cd" ];
+      plugins = [ "git" "fzf" ];
       theme = "robbyrussell";
     };
   };
