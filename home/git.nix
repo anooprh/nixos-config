@@ -11,6 +11,9 @@
       ".direnv"
       ".vscode/settings.json"
     ];
+    extraConfig = {
+      init.defaultBranch = "main";
+    }
   };
   programs.gitui.enable = true;
   programs.gh.enable = true;
