@@ -67,8 +67,8 @@
       }
     ];
     shortcuts = {
-      services = {
-        "org.flameshot.Flameshot.deskto" = [ "Capture" "Print" ];
+      "services/org.flameshot.Flameshot.desktop" = {
+        "Capture" = "Print";
       };
     };
 
