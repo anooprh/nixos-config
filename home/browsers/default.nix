@@ -8,5 +8,6 @@
 
   home.packages = with pkgs; [
     google-chrome
+    lynx # CLI based browser ; for TTY interfaces
   ];
 }
