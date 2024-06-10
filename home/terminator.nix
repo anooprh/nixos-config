@@ -15,7 +15,8 @@
       profiles.default.visible_bell = true;
       profiles.default.urgent_bell = true;
       profiles.default.cursor_shape = "ibeam";
-      profiles.default.font = "JetBrains Mono 11";
+      profiles.default.font = "JetBrains Mono Semi-Bold 11";
+      profiles.default.bold_is_bright = true;
     };
   };
 }
