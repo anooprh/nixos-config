@@ -50,6 +50,8 @@
     nix-output-monitor
     # Formatter for nix files
     statix
+    # Nix OS Helper
+    nh
 
     ## productivity
     # hugo # static site generator
