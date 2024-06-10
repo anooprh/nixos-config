@@ -8,8 +8,8 @@
     syntaxHighlighting.enable = true;
 
     shellAliases = {
-        k = "kubectl"; 
         p = "cd ~/Workspace";
+        t = "cd ~/Tools";
         pbcopy = "xsel --clipboard --input";
         pbpaste = "xsel --clipboard --output";
     };
@@ -18,7 +18,7 @@
 
     oh-my-zsh = {
       enable = true;
-      plugins = [ "git" "fzf"];
+      plugins = [ "git" "fzf" "git-prompt" "zsh-interactive-cd" ];
       theme = "robbyrussell";
     };
   };
