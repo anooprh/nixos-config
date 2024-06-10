@@ -74,5 +74,11 @@
         "Capture" = "Print";
       };
     };
+    
+    configFile = {
+      # Show Krunner in the Center with Auto Completion
+      "krunnerrc"."General"."FreeFloating" = true;
+      "krunnerrc"."General"."historyBehavior" = "ImmediateCompletion";
+    };
   };
 }
