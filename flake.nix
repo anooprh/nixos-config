@@ -1,6 +1,6 @@
 {
   description = "System Flake";
-  outputs = { self, nixpkgs, home-manager, ... }@inputs: 
+  outputs = { self, nixpkgs, home-manager, plasma-manager, ... }@inputs: 
   let 
     user = {
       name = "anoop";
@@ -27,6 +27,7 @@
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
           home-manager.extraSpecialArgs = { inherit inputs user system; };
+          home-manager.sharedModules = [ plasma-manager.homeManagerModules.plasma-manager ];
           home-manager.users.${user.name} = {
             home.username = "${user.name}";
             home.homeDirectory = "/home/${user.name}";
@@ -39,6 +40,7 @@
               ./home/docker.nix
               ./home/documentutils.nix
               ./home/git.nix
+              ./home/kde.nix
               ./home/multimedia.nix
               ./home/shells.nix
               ./home/terminator.nix
@@ -64,6 +66,11 @@
     firefox-addons = {
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
+    };
+    plasma-manager = {
+      url = "github:pjones/plasma-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.home-manager.follows = "home-manager";
     };
   };
 }

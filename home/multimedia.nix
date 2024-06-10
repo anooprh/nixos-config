@@ -26,6 +26,9 @@
 
     # VLC Media Player
     vlc
+
+    # Krita - A free and open source painting application
+    krita
   ];
 
 }
