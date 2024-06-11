@@ -1,15 +1,21 @@
 { inputs, config, pkgs, lib, ... }:
 
 {
+  home.packages = with pkgs;[
+    libsForQt5.polonium
+  ];
 
   programs.plasma = {
     enable = true;
     overrideConfig = true;
 
+    windows.allowWindowsToRememberPositions = true;
+
     panels = [
       {
         location = "top";
         height = 36;
+        floating = true;
         widgets = [
           "org.kde.plasma.kickoff"
           {
@@ -59,9 +65,9 @@
               calendar.firstDayOfWeek = "monday";
               time.format = "12h";
               time.showSeconds = "always";
-              date.position = "adaptive";
+              date.position = "besideTime";
               date.format = {
-                "custom" = "dddd dd MMMM yyyy";
+                "custom" = "ddd d MMM";
               };
             };
           }
@@ -79,6 +85,9 @@
       # Show Krunner in the Center with Auto Completion
       "krunnerrc"."General"."FreeFloating" = true;
       "krunnerrc"."General"."historyBehavior" = "ImmediateCompletion";
+
+      # Enable numlock on login
+      "kcminputrc"."Keyboard"."NumLock"."value" = 0;
     };
   };
 }
