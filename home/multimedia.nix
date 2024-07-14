@@ -29,6 +29,9 @@
 
     # Krita - A free and open source painting application
     krita
+
+    # Zoom - Video calls
+    zoom-us
   ];
 
 }

@@ -18,5 +18,8 @@
     latex2html
     latex2mathml
 
+    # Office
+    libreoffice-qt
+
   ];
 }

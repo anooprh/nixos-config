@@ -14,7 +14,7 @@
     panels = [
       {
         location = "top";
-        height = 36;
+        height = 30;
         floating = true;
         widgets = [
           "org.kde.plasma.kickoff"
