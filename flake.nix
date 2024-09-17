@@ -19,11 +19,11 @@
         # so the old configuration file still takes effect
         ./machines/${hostname}/hardware-configuration.nix
         ./nixos/configuration.nix { _module.args = { inherit hostname baseVersion; };}
+        ./nixos/users.nix { _module.args = { inherit user; };}
         {
           # Nix daemon configuration
           nix.settings.trusted-users = [ "root" "${user.name}" ];
         }
-        ./nixos/users.nix { _module.args = { inherit user; };}
 
   	    # make home-manager as a module of nixos
         # so that home-manager configuration will be deployed automatically when executing `nixos-rebuild switch`
