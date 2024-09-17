@@ -28,6 +28,16 @@
       aaron-bond.better-comments
       donjayamanne.githistory
       pkief.material-icon-theme
+      
+      ms-python.python
+      ms-toolsai.jupyter
+      ms-toolsai.jupyter-keymap
+      
+      tamasfe.even-better-toml
+      redhat.vscode-yaml
+      redhat.vscode-xml
+
+      yzhang.markdown-all-in-one
     ];
     mutableExtensionsDir = true;
     userSettings = {
