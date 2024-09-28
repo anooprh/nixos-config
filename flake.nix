@@ -43,6 +43,7 @@
               ./home/devtools.nix
               ./home/docker.nix
               ./home/documentutils.nix
+              ./home/game_dev.nix
               ./home/git.nix
               ./home/kde.nix
               ./home/multimedia.nix
