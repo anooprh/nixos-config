@@ -2,7 +2,7 @@
 
 {
   home.packages = with pkgs;[
-    libsForQt5.polonium
+    # libsForQt5.polonium
   ];
 
   programs.plasma = {

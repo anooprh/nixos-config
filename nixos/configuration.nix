@@ -53,7 +53,7 @@
   services.printing.enable = true;
 
   # Enable sound with pipewire.
-  sound.enable = true;
+  # sound.enable = true;
   # hardware.pulseaudio.enable = true;
   security.rtkit.enable = true;
   services.pipewire = {
@@ -128,4 +128,5 @@
   virtualisation.virtualbox.guest.seamless = true;
   virtualisation.docker.enable = true;
   
+  programs.nix-ld.enable = true;
 }
