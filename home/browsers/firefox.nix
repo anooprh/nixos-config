@@ -10,9 +10,9 @@
 
   programs.firefox = {
     enable = true;
-    preferences = {
-      "widget.use-xdg-desktop-portal.file-picker" = 1;
-    };    
+      # preferences = {
+      #   "widget.use-xdg-desktop-portal.file-picker" = 1;
+      # };    
     profiles.${user.name} = {
       settings = {
         "dom.security.https_only_mode" = true;
